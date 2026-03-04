@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>League HQ</title>
+  <meta name="description" content="League standings, weekly matchups, recaps, and history." />
+
+  <!-- Open Graph (optional) -->
+  <meta property="og:title" content="League HQ" />
+  <meta property="og:description" content="Standings, matchups, recaps, and history." />
+  <meta property="og:type" content="website" />
+  <!-- <meta property="og:image" content="/assets/og.jpg" /> -->
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --panel: rgba(255,255,255,.06);
+      --panel2: rgba(255,255,255,.09);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --border: rgba(255,255,255,.12);
+      --accent: #8b5cf6; /* change me */
+      --good: #22c55e;
+      --bad: #ef4444;
+      --warn: #f59e0b;
+      --shadow: 0 10px 30px rgba(0,0,0,.28);
+      --radius: 16px;
+      --radius-sm: 12px;
+      --max: 1100px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    [data-theme="light"]{
+      --bg: #f7f7fb;
+      --panel: rgba(0,0,0,.04);
+      --panel2: rgba(0,0,0,.06);
+      --text: rgba(0,0,0,.88);
+      --muted: rgba(0,0,0,.60);
+      --border: rgba(0,0,0,.10);
+      --shadow: 0 10px 30px rgba(0,0,0,.12);
+    }
+
+    *{ box-sizing: border-box; }
+    html, body{ height: 100%; }
+    body{
+      margin: 0;
+      font-family: var(--sans);
+      color: var(--text);
+      background:
+        radial-gradient(1000px 600px at 15% -10%, rgba(139,92,246,.22), transparent 55%),
+        radial-gradient(900px 520px at 90% 0%, rgba(34,197,94,.14), transparent 55%),
+        var(--bg);
+    }
+    a{ color: inherit; text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    .container{ width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+
+    /* Header */
+    header{
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(to bottom, rgba(11,18,32,.85), rgba(11,18,32,.55));
+      border-bottom: 1px solid var(--border);
+    }
+    [data-theme="light"] header{
+      background: linear-gradient(to bottom, rgba(247,247,251,.90), rgba(247,247,251,.70));
+    }
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      padding: 14px 0;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      min-width: 0;
+    }
+    .logo{
+      width: 38px; height: 38px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(139,92,246,.8), rgba(34,197,94,.55));
+      box-shadow: var(--shadow);
+      flex: 0 0 auto;
+    }
+    .brandText{ min-width: 0; }
+    .brandTitle{
+      font-weight: 800;
+      letter-spacing: .2px;
+      line-height: 1.1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .brandSub{
+      font-size: 12.5px;
+      color: var(--muted);
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    nav{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .navlink{
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .navlink:hover{
+      border-color: var(--border);
+      background: var(--panel);
+      color: var(--text);
+      text-decoration: none;
+    }
+    .btn{
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 14px;
+      cursor: pointer;
+      display:flex;
+      align-items:center;
+      gap: 8px;
+    }
+    .btn:hover{ background: var(--panel2); }
+    .dot{
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--warn);
+    }
+    .dot.ok{ background: var(--good); }
+    .dot.bad{ background: var(--bad); }
+
+    /* Hero */
+    .hero{
+      padding: 22px 0 8px;
+    }
+    .heroGrid{
+      display:grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+    @media (max-width: 900px){
+      .heroGrid{ grid-template-columns: 1fr; }
+      nav{ justify-content:flex-start; }
+    }
+    .card{
+      border: 1px solid var(--border);
+      background: linear-gradient(to bottom, var(--panel), transparent);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .cardInner{ padding: 16px; }
+    .heroTitle{
+      font-size: clamp(22px, 3vw, 34px);
+      margin: 0 0 8px 0;
+      line-height: 1.15;
+    }
+    .heroDesc{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .pillRow{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+    .pill{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      border-radius: 999px;
+      padding: 8px 10px;
+      font-size: 13px;
+      color: var(--muted);
+      display:flex;
+      align-items:center;
+      gap: 8px;
+    }
+    [data-theme="light"] .pill{ background: rgba(0,0,0,.03); }
+    .pill strong{ color: var(--text); font-weight: 700; }
+    .accent{
+      color: white;
+      background: linear-gradient(135deg, rgba(139,92,246,.9), rgba(139,92,246,.55));
+      border-color: rgba(139,92,246,.35);
+    }
+    .fieldRow{
+      display:flex;
+      gap: 10px;
+      align-items:center;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    label{ font-size: 13px; color: var(--muted); }
+    select, input[type="text"]{
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 9px 10px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    /* Main sections */
+    main{ padding: 10px 0 40px; }
+    .grid2{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+    @media (max-width: 900px){
+      .grid2{ grid-template-columns: 1fr; }
+    }
+    .sectionTitle{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap: 10px;
+      padding: 14px 16px 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sectionTitle h2{
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: .2px;
+    }
+    .sectionTitle .meta{
+      font-size: 12.5px;
+      color: var(--muted);
+      font-family: var(--mono);
+    }
+
+    /* Standings table */
+    .tableWrap{ overflow:auto; }
+    table{
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 520px;
+    }
+    th, td{
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    th{
+      font-size: 12.5px;
+      color: var(--muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    tr:hover td{ background: rgba(255,255,255,.03); }
+    [data-theme="light"] tr:hover td{ background: rgba(0,0,0,.03); }
+    .rank{
+      font-family: var(--mono);
+      color: var(--muted);
+      width: 56px;
+    }
+    .teamCell{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      min-width: 0;
+    }
+    .teamLogo{
+      width: 26px; height: 26px;
+      border-radius: 8px;
+      background: var(--panel2);
+      border: 1px solid var(--border);
+      flex: 0 0 auto;
+      overflow: hidden;
+    }
+    .teamLogo img{ width:100%; height:100%; object-fit: cover; display:block; }
+    .teamName{
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Matchups */
+    .matchups{
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 14px 16px 16px;
+    }
+    .matchCard{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      display:grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 10px;
+      align-items: center;
+    }
+    [data-theme="light"] .matchCard{ background: rgba(0,0,0,.03); }
+    .side{
+      display:flex;
+      align-items:center;
+      gap: 10px;
+      min-width: 0;
+    }
+    .side .name{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 700;
+    }
+    .score{
+      font-family: var(--mono);
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .vs{
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 12.5px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px dashed var(--border);
+    }
+    .winner .name{ color: white; }
+    .winner{ background: linear-gradient(135deg, rgba(139,92,246,.22), rgba(34,197,94,.15)); }
+
+    /* Recaps */
+    .recaps{
+      padding: 14px 16px 16px;
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .recapItem{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius-sm);
+      padding: 12px;
+    }
+    [data-theme="light"] .recapItem{ background: rgba(0,0,0,.03); }
+    .recapTop{
+      display:flex;
+      justify-content:space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+    .recapTitle{
+      font-weight: 800;
+      margin: 0;
+      font-size: 14.5px;
+    }
+    .recapMeta{
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+    .recapSummary{
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.45;
+    }
+
+    /* Status + skeleton */
+    .status{
+      padding: 14px 16px;
+      color: var(--muted);
+      font-size: 13.5px;
+      border-top: 1px solid var(--border);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .error{
+      color: rgba(239,68,68,.95);
+      font-family: var(--mono);
+    }
+    .sk{
+      background: linear-gradient(90deg, rgba(255,255,255,.08), rgba(255,255,255,.03), rgba(255,255,255,.08));
+      background-size: 200% 100%;
+      animation: shimmer 1.2s infinite;
+      border-radius: 8px;
+      height: 14px;
+    }
+    [data-theme="light"] .sk{
+      background: linear-gradient(90deg, rgba(0,0,0,.08), rgba(0,0,0,.03), rgba(0,0,0,.08));
+    }
+    @keyframes shimmer{
+      0%{ background-position: 200% 0; }
+      100%{ background-position: -200% 0; }
+    }
+
+    footer{
+      padding: 22px 0 40px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .footRow{
+      display:flex;
+      justify-content:space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+    .footLinks{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="topbar">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div class="brandText">
+            <div class="brandTitle" id="leagueName">League HQ</div>
+            <div class="brandSub" id="leagueTagline">Standings • Matchups • Recaps</div>
+          </div>
+        </div>
+
+        <nav>
+          <!-- Add these pages later; keep links now for structure -->
+          <a class="navlink" href="./index.html" aria-current="page">Home</a>
+          <a class="navlink" href="./standings.html">Standings</a>
+          <a class="navlink" href="./matchups.html">Matchups</a>
+          <a class="navlink" href="./teams.html">Teams</a>
+          <a class="navlink" href="./recaps.html">Recaps</a>
+          <a class="navlink" href="./rules.html">Rules</a>
+
+          <button class="btn" id="themeBtn" type="button" title="Toggle theme">
+            <span>Theme</span>
+          </button>
+
+          <button class="btn" id="apiBtn" type="button" title="API status">
+            <span class="dot" id="apiDot" aria-hidden="true"></span>
+            <span id="apiLabel">Connecting</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="container hero">
+    <div class="heroGrid">
+      <section class="card">
+        <div class="cardInner">
+          <h1 class="heroTitle" id="heroTitle">Your league website, powered by Google Sheets.</h1>
+          <p class="heroDesc" id="heroDesc">
+            Live standings, weekly matchups, and recaps—pulled from your Google Workspace backend (Sheets + Apps Script).
+          </p>
+
+          <div class="pillRow">
+            <div class="pill accent"><strong id="pillSeason">Season</strong> <span id="seasonYear">—</span></div>
+            <div class="pill"><strong>Week</strong> <span id="currentWeekLabel">—</span></div>
+            <div class="pill"><strong>Last Update</strong> <span id="lastUpdated">—</span></div>
+          </div>
+
+          <div class="fieldRow" style="margin-top:14px;">
+            <label for="weekSelect">View week:</label>
+            <select id="weekSelect" aria-label="Select week"></select>
+            <button class="btn" id="reloadBtn" type="button">Reload</button>
+          </div>
+
+          <div class="status">
+            <span id="statusText">Loading league data…</span>
+            <span class="error" id="statusError" style="display:none;"></span>
+          </div>
+        </div>
+      </section>
+
+      <aside class="card">
+        <div class="sectionTitle">
+          <h2>Quick Links</h2>
+          <div class="meta" id="metaHint">Set API_BASE</div>
+        </div>
+        <div class="cardInner" style="padding-top:12px;">
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <a class="btn" href="./standings.html">📊 Full Standings</a>
+            <a class="btn" href="./matchups.html">🏈 Weekly Matchups</a>
+            <a class="btn" href="./recaps.html">📝 Weekly Recaps</a>
+            <a class="btn" href="./rules.html">📚 League Rules</a>
+          </div>
+          <p style="margin:14px 0 0;color:var(--muted);font-size:13.5px;line-height:1.5;">
+            Commissioner tip: set <span style="font-family:var(--mono);">Config.leagueName</span> and
+            <span style="font-family:var(--mono);">Config.currentWeek</span> in your Sheet to control what shows here.
+          </p>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <main class="container">
+    <div class="grid2">
+      <!-- Standings -->
+      <section class="card" aria-label="Standings">
+        <div class="sectionTitle">
+          <h2>Standings</h2>
+          <div class="meta" id="standingsMeta">—</div>
+        </div>
+        <div class="tableWrap">
+          <table aria-describedby="standingsMeta">
+            <thead>
+              <tr>
+                <th class="rank">Rank</th>
+                <th>Team</th>
+                <th>W</th>
+                <th>L</th>
+                <th>T</th>
+                <th>PF</th>
+                <th>PA</th>
+                <th>Streak</th>
+              </tr>
+            </thead>
+            <tbody id="standingsBody">
+              <!-- skeleton rows -->
+              <tr><td colspan="8"><div class="sk" style="height:14px;"></div></td></tr>
+              <tr><td colspan="8"><div class="sk" style="height:14px;"></div></td></tr>
+              <tr><td colspan="8"><div class="sk" style="height:14px;"></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Week Matchups -->
+      <section class="card" aria-label="Week matchups">
+        <div class="sectionTitle">
+          <h2>Week Matchups</h2>
+          <div class="meta" id="weekMeta">—</div>
+        </div>
+        <div class="matchups" id="matchupsList">
+          <div class="sk" style="height:44px;"></div>
+          <div class="sk" style="height:44px;"></div>
+          <div class="sk" style="height:44px;"></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Recaps -->
+    <section class="card" style="margin-top:14px;" aria-label="Latest recaps">
+      <div class="sectionTitle">
+        <h2>Latest Recaps</h2>
+        <div class="meta" id="recapsMeta">—</div>
+      </div>
+      <div class="recaps" id="recapsList">
+        <div class="sk" style="height:54px;"></div>
+        <div class="sk" style="height:54px;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="footRow">
+      <div>© <span id="footYear"></span> <span id="footLeague">League HQ</span></div>
+      <div class="footLinks">
+        <a href="./privacy.html">Privacy</a>
+        <a href="./about.html">About</a>
+        <a href="./admin.html">Admin</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    "use strict";
+
+    /**
+     * 1) Paste your Apps Script Web App URL here (the /exec URL).
+     * Example:
+     * const API_BASE = "https://script.google.com/macros/s/AKfycbx.../exec";
+     */
+    const API_BASE = "https://script.google.com/macros/s/AKfycbz8Ns447nXcGYr1oFo64h3mmfIFat-AwGTZinJdGkj1lr1GsPCFmiom3xMyg_nZAibz2A/exec";;
+
+    // Local cache (browser) so the site still shows something if API hiccups
+    const LS = {
+      theme: "league_theme",
+      standings: "league_cache_standings",
+      recaps: "league_cache_recaps",
+      weekPrefix: "league_cache_week_"
+    };
+
+    const el = (id) => document.getElementById(id);
+
+    function escapeHTML(s){
+      return String(s ?? "").replace(/[&<>"']/g, c => ({
+        "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+      }[c]));
+    }
+
+    function setApiStatus(ok, label){
+      const dot = el("apiDot");
+      dot.classList.remove("ok","bad");
+      dot.classList.add(ok ? "ok" : "bad");
+      el("apiLabel").textContent = label;
+    }
+
+    function setStatus(msg, err){
+      el("statusText").textContent = msg;
+      if (err){
+        el("statusError").style.display = "";
+        el("statusError").textContent = err;
+      } else {
+        el("statusError").style.display = "none";
+        el("statusError").textContent = "";
+      }
+    }
+
+    function normalizeApiBase(url){
+      const u = String(url || "").trim();
+      if (!u || u.includes("PASTE_YOUR")) return "";
+      return u.replace(/\/+$/, ""); // remove trailing slashes
+    }
+
+    async function fetchJSON(route, params = {}, timeoutMs = 12000){
+      const base = normalizeApiBase(API_BASE);
+      if (!base) throw new Error("API_BASE is not set");
+
+      const qs = new URLSearchParams({ r: route, ...params }).toString();
+      const url = `${base}?${qs}`;
+
+      const controller = new AbortController();
+      const t = setTimeout(() => controller.abort(), timeoutMs);
+
+      try{
+        const res = await fetch(url, { signal: controller.signal, cache: "no-store" });
+        const txt = await res.text();
+        // Apps Script always 200-ish; parse and rely on ok flags
+        const data = JSON.parse(txt);
+        return data;
+      } finally {
+        clearTimeout(t);
+      }
+    }
+
+    function applyTheme(initial){
+      const root = document.documentElement;
+      if (initial){
+        const saved = localStorage.getItem(LS.theme);
+        if (saved === "light" || saved === "dark"){
+          root.setAttribute("data-theme", saved);
+          return;
+        }
+        // default: follow system
+        const prefersLight = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches;
+        root.setAttribute("data-theme", prefersLight ? "light" : "dark");
+        return;
+      }
+      const cur = root.getAttribute("data-theme") || "dark";
+      const next = cur === "dark" ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      localStorage.setItem(LS.theme, next);
+    }
+
+    function buildTeamsMap(teams){
+      const map = new Map();
+      (teams || []).forEach(t => map.set(String(t.teamId), t));
+      return map;
+    }
+
+    function fmt2(n){
+      const x = Number(n || 0);
+      return (Math.round(x * 100) / 100).toFixed(2);
+    }
+
+    function renderStandings(standings, teamsMap){
+      const body = el("standingsBody");
+      body.innerHTML = "";
+
+      (standings || []).forEach(row => {
+        const team = teamsMap.get(String(row.teamId)) || {};
+        const logo = team.logoUrl ? `<img alt="" src="${escapeHTML(team.logoUrl)}" loading="lazy" />` : "";
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td class="rank">${escapeHTML(row.rank ?? "")}</td>
+          <td>
+            <div class="teamCell">
+              <div class="teamLogo">${logo}</div>
+              <div class="teamName" title="${escapeHTML(team.teamName || row.teamId)}">
+                ${escapeHTML(team.teamName || row.teamId)}
+              </div>
+            </div>
+          </td>
+          <td>${escapeHTML(row.wins ?? 0)}</td>
+          <td>${escapeHTML(row.losses ?? 0)}</td>
+          <td>${escapeHTML(row.ties ?? 0)}</td>
+          <td>${fmt2(row.pointsFor)}</td>
+          <td>${fmt2(row.pointsAgainst)}</td>
+          <td style="font-family:var(--mono);color:var(--muted)">${escapeHTML(row.streak || "")}</td>
+        `;
+        body.appendChild(tr);
+      });
+
+      el("standingsMeta").textContent = `${standings?.length || 0} teams`;
+    }
+
+    function renderMatchups(weekNum, results, teamsMap){
+      const list = el("matchupsList");
+      list.innerHTML = "";
+
+      if (!results || !results.length){
+        list.innerHTML = `<div style="color:var(--muted);padding:6px 2px;">No results found for week ${weekNum}.</div>`;
+        return;
+      }
+
+      results.forEach(m => {
+        const home = teamsMap.get(String(m.homeTeamId)) || { teamName: m.homeTeamId };
+        const away = teamsMap.get(String(m.awayTeamId)) || { teamName: m.awayTeamId };
+        const winner = String(m.winnerTeamId || "");
+        const homeWin = winner && winner === String(m.homeTeamId);
+        const awayWin = winner && winner === String(m.awayTeamId);
+
+        const card = document.createElement("div");
+        card.className = "matchCard";
+        card.innerHTML = `
+          <div class="side ${homeWin ? "winner" : ""}">
+            <div class="teamLogo" aria-hidden="true">${home.logoUrl ? `<img alt="" src="${escapeHTML(home.logoUrl)}" loading="lazy" />` : ""}</div>
+            <div style="min-width:0;">
+              <div class="name" title="${escapeHTML(home.teamName)}">${escapeHTML(home.teamName)}</div>
+              <div class="score">${fmt2(m.homePoints)}</div>
+            </div>
+          </div>
+
+          <div class="vs">${m.isTie ? "TIE" : "VS"}</div>
+
+          <div class="side ${awayWin ? "winner" : ""}" style="justify-content:flex-end;">
+            <div style="min-width:0;text-align:right;">
+              <div class="name" title="${escapeHTML(away.teamName)}">${escapeHTML(away.teamName)}</div>
+              <div class="score">${fmt2(m.awayPoints)}</div>
+            </div>
+            <div class="teamLogo" aria-hidden="true">${away.logoUrl ? `<img alt="" src="${escapeHTML(away.logoUrl)}" loading="lazy" />` : ""}</div>
+          </div>
+        `;
+        list.appendChild(card);
+      });
+
+      el("weekMeta").textContent = `Week ${weekNum} • ${results.length} matchups`;
+    }
+
+    function renderRecaps(recaps){
+      const list = el("recapsList");
+      list.innerHTML = "";
+
+      const items = (recaps || []).slice().sort((a,b) => (b.week || 0) - (a.week || 0)).slice(0, 3);
+
+      if (!items.length){
+        list.innerHTML = `<div style="color:var(--muted);padding:6px 2px;">No recaps published yet.</div>`;
+        return;
+      }
+
+      items.forEach(r => {
+        const div = document.createElement("div");
+        div.className = "recapItem";
+        const title = r.title || `Week ${r.week} Recap`;
+        const when = r.publishedAt ? new Date(r.publishedAt).toLocaleDateString() : "";
+        const author = r.author ? ` • ${r.author}` : "";
+        const meta = `Week ${r.week}${when ? " • " + when : ""}${author}`;
+
+        div.innerHTML = `
+          <div class="recapTop">
+            <p class="recapTitle">
+              ${r.docUrl ? `<a href="${escapeHTML(r.docUrl)}" target="_blank" rel="noopener">${escapeHTML(title)}</a>` : escapeHTML(title)}
+            </p>
+            <div class="recapMeta">${escapeHTML(meta)}</div>
+          </div>
+          ${r.summary ? `<p class="recapSummary">${escapeHTML(r.summary)}</p>` : ""}
+        `;
+        list.appendChild(div);
+      });
+
+      el("recapsMeta").textContent = `${items.length} shown`;
+    }
+
+    function buildWeekOptions(maxWeeks, selectedWeek){
+      const sel = el("weekSelect");
+      sel.innerHTML = "";
+      const n = Math.max(1, Number(maxWeeks || 18));
+
+      for (let w = 1; w <= n; w++){
+        const opt = document.createElement("option");
+        opt.value = String(w);
+        opt.textContent = `Week ${w}`;
+        if (w === selectedWeek) opt.selected = true;
+        sel.appendChild(opt);
+      }
+    }
+
+    function setLeagueBrandFromConfig(cfg){
+      const leagueName = cfg.leagueName || "League HQ";
+      const tagline = cfg.siteTagline || "Standings • Matchups • Recaps";
+      const season = cfg.seasonYear || "";
+
+      document.title = leagueName;
+      el("leagueName").textContent = leagueName;
+      el("footLeague").textContent = leagueName;
+      el("leagueTagline").textContent = tagline;
+      el("seasonYear").textContent = String(season || "—");
+      el("heroTitle").textContent = cfg.heroTitle || `${leagueName} — League HQ`;
+      el("heroDesc").textContent = cfg.heroDesc || "Live standings, weekly matchups, and recaps—pulled from your Google Workspace backend.";
+      el("metaHint").textContent = normalizeApiBase(API_BASE) ? "API connected" : "Paste API_BASE";
+    }
+
+    function lastUpdatedFromStandings(standings){
+      const times = (standings || []).map(s => s.lastUpdated).filter(Boolean);
+      if (!times.length) return "";
+      const newest = times.map(t => new Date(t).getTime()).sort((a,b)=>b-a)[0];
+      return new Date(newest).toLocaleString();
+    }
+
+    async function loadAll(){
+      setStatus("Loading league data…");
+      setApiStatus(false, "Connecting");
+
+      // Fast render from local cache (if any)
+      try{
+        const cachedStandings = JSON.parse(localStorage.getItem(LS.standings) || "null");
+        if (cachedStandings?.ok) {
+          const teamsMap = buildTeamsMap(cachedStandings.teams);
+          renderStandings(cachedStandings.standings, teamsMap);
+          setLeagueBrandFromConfig(cachedStandings.config || {});
+          el("lastUpdated").textContent = lastUpdatedFromStandings(cachedStandings.standings) || "—";
+        }
+      } catch(_) {}
+
+      try{
+        // 1) Standings (includes config + teams)
+        const standingsPayload = await fetchJSON("standings");
+        if (!standingsPayload.ok) throw new Error("standings endpoint returned ok=false");
+        localStorage.setItem(LS.standings, JSON.stringify(standingsPayload));
+
+        const cfg = standingsPayload.config || {};
+        setLeagueBrandFromConfig(cfg);
+
+        const teamsMap = buildTeamsMap(standingsPayload.teams);
+        renderStandings(standingsPayload.standings, teamsMap);
+
+        // Week selection logic:
+        const maxWeeks = Number(cfg.regularSeasonWeeks || 14) + Number(cfg.playoffWeeks || 3);
+        const currentWeek = Number(cfg.currentWeek || 1);
+        buildWeekOptions(maxWeeks, currentWeek);
+
+        el("currentWeekLabel").textContent = String(currentWeek);
+        el("lastUpdated").textContent = lastUpdatedFromStandings(standingsPayload.standings) || "—";
+
+        // 2) Load week + recaps in parallel
+        const weekNum = Number(el("weekSelect").value || currentWeek || 1);
+
+        const [weekPayload, recapsPayload] = await Promise.all([
+          fetchJSON("week", { week: weekNum }).catch(err => ({ ok:false, error: String(err) })),
+          fetchJSON("recaps").catch(err => ({ ok:false, error: String(err) }))
+        ]);
+
+        // Week render (cache per week)
+        if (weekPayload.ok){
+          localStorage.setItem(LS.weekPrefix + weekNum, JSON.stringify(weekPayload));
+          renderMatchups(weekNum, weekPayload.results, teamsMap);
+        } else {
+          // fallback to cached week
+          try{
+            const cachedWeek = JSON.parse(localStorage.getItem(LS.weekPrefix + weekNum) || "null");
+            if (cachedWeek?.ok) renderMatchups(weekNum, cachedWeek.results, teamsMap);
+            else el("matchupsList").innerHTML = `<div class="error">Week load failed: ${escapeHTML(weekPayload.error || "unknown error")}</div>`;
+          } catch(_) {
+            el("matchupsList").innerHTML = `<div class="error">Week load failed.</div>`;
+          }
+        }
+
+        // Recaps render (cache)
+        if (recapsPayload.ok){
+          localStorage.setItem(LS.recaps, JSON.stringify(recapsPayload));
+          renderRecaps(recapsPayload.recaps);
+        } else {
+          try{
+            const cachedRecaps = JSON.parse(localStorage.getItem(LS.recaps) || "null");
+            if (cachedRecaps?.ok) renderRecaps(cachedRecaps.recaps);
+            else renderRecaps([]);
+          } catch(_) {
+            renderRecaps([]);
+          }
+        }
+
+        setApiStatus(true, "Live");
+        setStatus("Loaded.");
+      } catch (err){
+        setApiStatus(false, "Offline");
+        setStatus("Showing cached data (if available).", String(err && err.message ? err.message : err));
+      }
+    }
+
+    // Events
+    el("themeBtn").addEventListener("click", () => applyTheme(false));
+    el("reloadBtn").addEventListener("click", () => loadAll());
+    el("weekSelect").addEventListener("change", async () => {
+      // Only re-fetch week results; standings stays
+      const weekNum = Number(el("weekSelect").value || 1);
+      el("currentWeekLabel").textContent = String(weekNum);
+
+      try{
+        const standingsPayload = JSON.parse(localStorage.getItem(LS.standings) || "null");
+        const teamsMap = buildTeamsMap(standingsPayload?.teams || []);
+
+        el("matchupsList").innerHTML = `<div class="sk" style="height:44px;"></div><div class="sk" style="height:44px;"></div>`;
+        const weekPayload = await fetchJSON("week", { week: weekNum });
+        if (!weekPayload.ok) throw new Error("week endpoint returned ok=false");
+
+        localStorage.setItem(LS.weekPrefix + weekNum, JSON.stringify(weekPayload));
+        renderMatchups(weekNum, weekPayload.results, teamsMap);
+        setApiStatus(true, "Live");
+      } catch (err){
+        setApiStatus(false, "Offline");
+        // fallback
+        try{
+          const cachedWeek = JSON.parse(localStorage.getItem(LS.weekPrefix + weekNum) || "null");
+          if (cachedWeek?.ok){
+            const standingsPayload = JSON.parse(localStorage.getItem(LS.standings) || "null");
+            const teamsMap = buildTeamsMap(standingsPayload?.teams || []);
+            renderMatchups(weekNum, cachedWeek.results, teamsMap);
+          } else {
+            el("matchupsList").innerHTML = `<div class="error">Week load failed.</div>`;
+          }
+        } catch(_) {
+          el("matchupsList").innerHTML = `<div class="error">Week load failed.</div>`;
+        }
+      }
+    });
+
+    // Init
+    applyTheme(true);
+    el("footYear").textContent = String(new Date().getFullYear());
+    loadAll();
+  </script>
+</body>
+</html>
