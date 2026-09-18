@@ -382,6 +382,72 @@
       line-height: 1.45;
     }
 
+    /* Writeups */
+    .writeups{
+      padding: 14px 16px 16px;
+      display:flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .writeupItem{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+    }
+    [data-theme="light"] .writeupItem{ background: rgba(0,0,0,.03); }
+    .writeupTop{
+      display:flex;
+      justify-content:space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+    .writeupTitle{
+      font-weight: 800;
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    .writeupTitle a{ color: inherit; }
+    .writeupMeta{
+      font-family: var(--mono);
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+    .writeupTag{
+      display:inline-block;
+      margin: 8px 0 0;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text);
+      background: linear-gradient(135deg, rgba(139,92,246,.30), rgba(34,197,94,.18));
+      border: 1px solid var(--border);
+    }
+    .writeupBody{
+      position: relative;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .writeupBody p{ margin: 0 0 10px; }
+    .writeupBody p:last-child{ margin-bottom: 0; }
+    .writeupBody.isClipped{
+      max-height: 168px;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
+    }
+    .writeupActions{
+      display:flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
     /* Status + skeleton */
     .status{
       padding: 14px 16px;
@@ -453,6 +519,7 @@
           <a class="navlink" href="./matchups.html">Matchups</a>
           <a class="navlink" href="./teams.html">Teams</a>
           <a class="navlink" href="./recaps.html">Recaps</a>
+          <a class="navlink" href="#writeups">Writeups</a>
           <a class="navlink" href="./rules.html">Rules</a>
 
           <button class="btn" id="themeBtn" type="button" title="Toggle theme">
@@ -506,6 +573,7 @@
             <a class="btn" href="./standings.html">📊 Full Standings</a>
             <a class="btn" href="./matchups.html">🏈 Weekly Matchups</a>
             <a class="btn" href="./recaps.html">📝 Weekly Recaps</a>
+            <a class="btn" href="#writeups">✍️ Writeups</a>
             <a class="btn" href="./rules.html">📚 League Rules</a>
           </div>
           <p style="margin:14px 0 0;color:var(--muted);font-size:13.5px;line-height:1.5;">
@@ -563,6 +631,17 @@
       </section>
     </div>
 
+    <!-- Writeups -->
+    <section class="card" style="margin-top:14px;" id="writeups" aria-label="Writeups">
+      <div class="sectionTitle">
+        <h2>Writeups</h2>
+        <div class="meta" id="writeupsMeta">&mdash;</div>
+      </div>
+      <div class="writeups" id="writeupsList">
+        <div class="sk" style="height:54px;"></div>
+      </div>
+    </section>
+
     <!-- Recaps -->
     <section class="card" style="margin-top:14px;" aria-label="Latest recaps">
       <div class="sectionTitle">
@@ -604,6 +683,39 @@
       recaps: "league_cache_recaps",
       weekPrefix: "league_cache_week_"
     };
+
+    /**
+     * Writeups
+     * -------------------------------------------------------------------
+     * Long-form league writeups, edited right here in this file (they do
+     * NOT come from the Sheet/Apps Script backend like recaps do).
+     *
+     * To publish a new one, add an object to the TOP of this array:
+     *   title       required  headline
+     *   body        required  the writeup itself; blank lines = paragraphs
+     *   author      optional  who wrote it
+     *   publishedAt optional  "YYYY-MM-DD" (drives the sort, newest first)
+     *   season      optional  season year, shown in the meta line
+     *   week        optional  week number, shown in the meta line
+     *   tag         optional  small badge above the body
+     *   docUrl      optional  link the title to a Google Doc / full post
+     */
+    const WRITEUPS = [
+      {
+        title: "Season Kickoff: The 2026 Greenville Natives Are Back",
+        author: "Commissioner",
+        publishedAt: "2026-09-18",
+        season: 2026,
+        week: 1,
+        tag: "First writeup of the season",
+        docUrl: "",
+        body: `Replace this text with the first writeup of the year.
+
+Leave a blank line between paragraphs and they will render as separate
+paragraphs. Anything longer than a few paragraphs is collapsed behind a
+"Read more" button so the section stays tidy on the homepage.`
+      }
+    ];
 
     const el = (id) => document.getElementById(id);
 
@@ -796,6 +908,80 @@
       el("recapsMeta").textContent = `${items.length} shown`;
     }
 
+    function renderWriteups(writeups){
+      const list = el("writeupsList");
+      list.innerHTML = "";
+
+      const items = (writeups || []).slice().sort((a, b) => {
+        const ta = a.publishedAt ? new Date(a.publishedAt).getTime() : 0;
+        const tb = b.publishedAt ? new Date(b.publishedAt).getTime() : 0;
+        if (tb !== ta) return tb - ta;
+        return (b.week || 0) - (a.week || 0);
+      });
+
+      if (!items.length){
+        list.innerHTML = `<div style="color:var(--muted);padding:6px 2px;">No writeups posted yet.</div>`;
+        el("writeupsMeta").textContent = "0 posted";
+        return;
+      }
+
+      items.forEach(w => {
+        const div = document.createElement("div");
+        div.className = "writeupItem";
+
+        const title = w.title || "Untitled writeup";
+        const when = w.publishedAt ? new Date(w.publishedAt).toLocaleDateString() : "";
+        const bits = [];
+        if (w.season) bits.push(String(w.season));
+        if (w.week) bits.push(`Week ${w.week}`);
+        if (when) bits.push(when);
+        if (w.author) bits.push(w.author);
+
+        const paragraphs = String(w.body || "")
+          .split(/\n\s*\n/)
+          .map(t => t.trim())
+          .filter(Boolean)
+          .map(t => `<p>${escapeHTML(t)}</p>`)
+          .join("");
+
+        div.innerHTML = `
+          <div class="writeupTop">
+            <p class="writeupTitle">
+              ${w.docUrl ? `<a href="${escapeHTML(w.docUrl)}" target="_blank" rel="noopener">${escapeHTML(title)}</a>` : escapeHTML(title)}
+            </p>
+            <div class="writeupMeta">${escapeHTML(bits.join(" \u2022 "))}</div>
+          </div>
+          ${w.tag ? `<span class="writeupTag">${escapeHTML(w.tag)}</span>` : ""}
+          <div class="writeupBody">${paragraphs || `<p>No content yet.</p>`}</div>
+        `;
+
+        list.appendChild(div);
+
+        // Collapse long writeups behind a Read more / Read less toggle.
+        const bodyEl = div.querySelector(".writeupBody");
+        if (bodyEl.scrollHeight > 200){
+          bodyEl.classList.add("isClipped");
+
+          const actions = document.createElement("div");
+          actions.className = "writeupActions";
+          const toggle = document.createElement("button");
+          toggle.className = "btn";
+          toggle.type = "button";
+          toggle.textContent = "Read more";
+          toggle.setAttribute("aria-expanded", "false");
+          toggle.addEventListener("click", () => {
+            const clipped = bodyEl.classList.toggle("isClipped");
+            toggle.textContent = clipped ? "Read more" : "Read less";
+            toggle.setAttribute("aria-expanded", clipped ? "false" : "true");
+          });
+          actions.appendChild(toggle);
+          div.appendChild(actions);
+        }
+      });
+
+      el("writeupsMeta").textContent = `${items.length} posted`;
+    }
+
     function buildWeekOptions(maxWeeks, selectedWeek){
       const sel = el("weekSelect");
       sel.innerHTML = "";
@@ -952,6 +1138,7 @@
     // Init
     applyTheme(true);
     el("footYear").textContent = String(new Date().getFullYear());
+    renderWriteups(WRITEUPS);
     loadAll();
   </script>
 </body>
