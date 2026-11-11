@@ -1,0 +1,686 @@
+{
+  "season": 2026,
+  "week": 9,
+  "title": "The Will Ferrell Cinematic Universe",
+  "subtitle": "Greenville Natives · 2026 Season · Week 9 Recap & Week 10 Preview",
+  "header_image": null,
+  "branding": "Greenville Natives · 2026 Season",
+  "managers": {
+    "Rex": "Taylor Hardee",
+    "Trey": "Trey Wilder",
+    "T Wood": "T Wood",
+    "Potter": "Mark Potter",
+    "Hud": "Josh Hudson",
+    "Waivers": "Michael Waivers",
+    "Galt": "Lee Galt",
+    "Clod": "Cody Clodfelter",
+    "E": "Ian Baro",
+    "Shain": "Shain Collins"
+  },
+  "intro": [
+    "Nine weeks into the Greenville Natives season, we've officially entered the Will Ferrell Cinematic Universe. Rex has the ego of Ron Burgundy and the roster to back it up, Trey keeps collecting victories like Chazz Michael Michaels collecting gold medals, and Potter is doing everything right only to watch somebody else get all the fucking glory.",
+    "Week 9 delivered the third-highest-scoring matchup in league history, another historically unfortunate loss for Potter, and a 61.5-point performance from E that probably should've been released directly to DVD.",
+    "With four weeks remaining in the regular season, we're assigning every manager a Will Ferrell character. Some are leading men. Others are the reason certain movies never get a sequel."
+  ],
+  "power_rankings": [
+    {
+      "rank": 1,
+      "team": "Rex",
+      "manager": "Taylor Hardee",
+      "character": "Ron Burgundy",
+      "movie": "Anchorman: The Legend of Ron Burgundy",
+      "movie_year": "2004",
+      "record": "8-1",
+      "power_score": 89.8,
+      "power_rank_change": 0,
+      "power_score_change": 1.0,
+      "power_record": "68-13",
+      "points_for": 1245.0,
+      "points_against": 903.5,
+      "avg_weekly_score": 138.3,
+      "body": [
+        "Rex doesn't know how to put this, but he's kind of a big deal. People know him. He's very important. He has many leather-bound books, and his apartment smells of rich mahogany.",
+        "At least that's how Ron Burgundy would introduce the man currently terrorizing the Greenville Natives.",
+        "Rex demolished Potter 172.5–143.5 behind Kenneth Walker's two touchdowns, Christian Watson's 171 receiving yards, and Brock Bowers' 111 yards and a touchdown. The two combined for **316.0 points, the third-highest-scoring regular-season matchup in league history**, just 8.8 points shy of the record. Rex's individual performance ranks 13th all-time and was the second-highest of his career, falling just 2.5 points short of the 175.0 he scored against Potter in Week 6 of 2025. Apparently, Rex saves his two most important broadcasts for the days Potter happens to be watching.",
+        "Even more impressive is the historical pace. Rex is averaging **138.3 points per game**, nearly ten points higher than Wood's all-time single-season record of 128.7 set in 2018. He's already finished as the league's weekly high scorer four times, just two shy of Trey's single-season record of six from 2010, and his 68-13 power record is approaching complete absurdity.",
+        "Ron Burgundy believed San Diego was lucky to have him. Rex probably feels the same way about Greenville Natives, and unfortunately, the numbers are making it difficult to tell him otherwise. Next week brings the Annual Taylor Bowl against Wood, the very man whose scoring-average record Rex is threatening to destroy. Somebody might want to keep Burgundy away from the scotch if that broadcast doesn't go according to plan."
+      ]
+    },
+    {
+      "rank": 2,
+      "team": "Trey",
+      "manager": "Trey Wilder",
+      "character": "Chazz Michael Michaels",
+      "movie": "Blades of Glory",
+      "movie_year": "2007",
+      "record": "8-1",
+      "power_score": 80.2,
+      "power_rank_change": 1,
+      "power_score_change": 0.57,
+      "power_record": "46-35",
+      "points_for": 1005.0,
+      "points_against": 820.5,
+      "avg_weekly_score": 111.7,
+      "body": [
+        "Chazz Michael Michaels was an arrogant, hard-drinking figure skater who somehow kept winning competitions despite having the personal discipline of a seventeen-year-old on spring break. His performances weren't always technically impressive, but the man knew how to finish on the podium and celebrate like he'd personally invented ice skating.",
+        "Trey defeated Clod 103.3–69.2 to improve to 8-1, with Matthew Golden catching ten passes for 164 yards and a touchdown and James Cook rushing for 107 yards. The win moved Trey back up to No. 2 in the official power rankings, although beating a defending champion in the middle of a collapse wasn't exactly Olympic-level competition.",
+        "The difference between Trey and Rex is becoming impossible to ignore. Rex has scored 1,245 points, Trey has managed 1,005, and both are 8-1. Trey's 46-35 power record suggests a team that's been good enough to beat most opponents roughly half the time, yet he's somehow collected eight victories while facing the fewest points in the league. Chazz would probably respond to this statistical criticism by taking off his shirt, grabbing a bottle of liquor, and informing everyone that mathematics is for pussies.",
+        "The bigger concern is Lamar Jackson, whose thumb injury required surgery and landed him on injured reserve. He's expected to miss at least six weeks and may not return until the NFL postseason, leaving Trey without his original starting quarterback for potentially the rest of the fantasy season. Jeremiyah Love remains unavailable as well, forcing the offense to improvise at the worst possible time.",
+        "Another victory against Galt would put Trey at 9-1 and strengthen his playoff position, but eventually Chazz is going to have to perform against somebody who can actually stay upright on the ice."
+      ]
+    },
+    {
+      "rank": 3,
+      "team": "T Wood",
+      "manager": "T Wood",
+      "character": "Frank the Tank",
+      "movie": "Old School",
+      "movie_year": "2003",
+      "record": "6-3",
+      "power_score": 76.7,
+      "power_rank_change": -1,
+      "power_score_change": -3.36,
+      "power_record": "43-38",
+      "points_for": 1023.3,
+      "points_against": 926.3,
+      "avg_weekly_score": 113.7,
+      "body": [
+        "Frank Ricard started *Old School* as a respectable married man before discovering that his true calling involved drinking enormous quantities of alcohol and running naked through the neighborhood. The transformation was spectacular, embarrassing, and ultimately unsustainable.",
+        "Wood's season is beginning to resemble the morning after.",
+        "After opening 5-0, Wood has lost three of his last four, including Sunday's 120.8–102.6 defeat against Waivers. D'Andre Swift went from scoring three rushing touchdowns in Week 8 to managing just 3.1 fantasy points, while Jahmyr Gibbs and Tucker Kraft failed to provide their expected production. Luther Burden caught seven passes for 97 yards and a touchdown but suffered a concussion, and Patrick Mahomes' elbow sprain created another concern despite an encouraging MRI.",
+        "Wood dropped from second to third in the power rankings, and his 43-38 power record is much less impressive than his actual 6-3 record. The funny part is that he still owns the league's scoring-average record from 2018. Apparently, Frank the Tank was a hell of a lot better at football back then.",
+        "And much like Frank's famous streaking scene, Wood appears to have taken off running under the impression that everybody else was following him, only to turn around and discover he's completely alone. The rest of the league has apparently gone home, and Rex is waiting down the street with a camera.",
+        "The Taylor Bowl is next, and Rex isn't only coming for the win. He's coming for the record and the title of best Taylor. Losing a fantasy matchup is one thing. Losing your fucking identity is another."
+      ]
+    },
+    {
+      "rank": 4,
+      "team": "Potter",
+      "manager": "Mark Potter",
+      "character": "Brad Whitaker",
+      "movie": "Daddy's Home",
+      "movie_year": "2015",
+      "record": "5-4",
+      "power_score": 74.8,
+      "power_rank_change": 0,
+      "power_score_change": -2.8,
+      "power_record": "53-28",
+      "points_for": 1106.1,
+      "points_against": 1061.9,
+      "avg_weekly_score": 122.9,
+      "body": [
+        "Brad Whitaker did everything a good stepfather was supposed to do. He provided for the family, showed up every day, and genuinely cared about the kids. Unfortunately, Mark Wahlberg kept showing up on a motorcycle, taking his shirt off, and making Brad look like a complete asshole without lifting a finger.",
+        "Potter has spent nine weeks playing the role of Brad, assembling one of the best teams in the league while everybody else somehow gets the glory. Joe Burrow threw for 271 yards and three touchdowns, Bucky Irving scored twice, and Puka Nacua caught 14 passes for 150 yards and a touchdown. Potter produced another excellent offensive performance and still walked away with absolutely nothing.",
+        "His 53-28 power record is the second-best in the league, yet he's sitting at 5-4 because opponents have scored an absurd 1,061.9 points against him. That's the most anyone has faced this season. If Brad Whitaker had Potter's luck, he'd spend three months building the perfect treehouse only for Mark Wahlberg to arrive, casually do a backflip off the roof, and have the children immediately declare him their new favorite parent.",
+        "Now the situation is getting worse. Nacua suffered knee ligament sprains and turf toe on the Rams' final offensive play and could miss several weeks, while Rhamondre Stevenson is also dealing with a knee injury. Potter is facing the possibility of losing important pieces of his offense just as the championship playoff race becomes serious.",
+        "Brad eventually earned his family's respect, but Potter's next opponent is E, a team averaging just 91.6 points. Beating E would be the fantasy equivalent of Brad finally getting his stepchildren to call him Dad. It's nice, but nobody's throwing you a fucking parade."
+      ]
+    },
+    {
+      "rank": 5,
+      "team": "Hud",
+      "manager": "Josh Hudson",
+      "character": "Jackie Moon",
+      "movie": "Semi-Pro",
+      "movie_year": "2008",
+      "record": "4-5",
+      "power_score": 63.3,
+      "power_rank_change": 0,
+      "power_score_change": 2.79,
+      "power_record": "36-45",
+      "points_for": 935.9,
+      "points_against": 999.3,
+      "avg_weekly_score": 104.0,
+      "body": [
+        "Jackie Moon was the owner, coach, player, and chief entertainer of the Flint Tropics, a basketball franchise that spent more time dreaming up ridiculous halftime promotions than figuring out how to win games. Josh Hudson has apparently been operating a similar organization, where optimism and questionable management occasionally combine to produce something resembling success.",
+        "Hud defeated Shain 105.4–93.6 behind Ja'Marr Chase's ten receptions for 155 yards and a touchdown, while Dak Prescott delivered a respectable performance in Dallas' victory over Indianapolis.",
+        "Hud remains fifth in the official power rankings despite his 36-45 power record, and at 4-5, he's still hanging around the championship playoff conversation. Jackie Moon would probably see that as an opportunity to announce that the Flint Tropics are about to become the greatest team in basketball history, then immediately schedule a halftime performance involving a trampoline, three cheerleaders, and a live mountain lion.",
+        "**Hud is now just one victory away from his 100th career win**, counting regular-season and playoff games. Jackie Moon would absolutely turn that milestone into a weeklong promotional event, complete with commemorative T-shirts, fireworks, and a guaranteed sellout at the Flint Tropics arena. Whether Josh actually gets No. 100 against Cody is another question, but at least there's finally something legitimate worth celebrating."
+      ]
+    },
+    {
+      "rank": 6,
+      "team": "Waivers",
+      "manager": "Michael Waivers",
+      "character": "Allen Gamble",
+      "movie": "The Other Guys",
+      "movie_year": "2010",
+      "record": "4-5",
+      "power_score": 62.4,
+      "power_rank_change": 0,
+      "power_score_change": 2.79,
+      "power_record": "50-31",
+      "points_for": 1012.4,
+      "points_against": 1012.1,
+      "avg_weekly_score": 112.5,
+      "body": [
+        "Allen Gamble was a mild-mannered forensic accountant who preferred paperwork and quiet afternoons until everyone discovered his bizarre past as Gator, a man with considerably more experience operating in the criminal underworld than anybody expected.",
+        "Nobody in this league saw Waivers as a threat after he opened 1-4, which is exactly how Gator likes it. He's won three of four since, most recently beating Wood 120.8–102.6. CeeDee Lamb led the NFL with 195 receiving yards on ten catches, Christian McCaffrey continued producing in the backfield, and Rome Odunze provided additional support. Waivers didn't need Josh Allen to have a spectacular afternoon because the rest of the offense was finally doing its fucking job.",
+        "What makes his situation interesting is the 50-31 power record, better than those of Trey and Wood despite his losing actual record. He's been one of the five highest-scoring teams six times this season, but those performances haven't translated into enough actual victories.",
+        "And there's a potentially infuriating ending developing here. If Waivers misses the playoffs by one game, knowing there was an entirely avoidable victory earlier in the season that could've put him over the top, it's going to be an all-time kick in the balls. Gator might be making a comeback, but he's also running out of time to fix the damage his earlier decisions caused.",
+        "Next week brings Shain, giving Waivers an opportunity to reach .500 and put himself directly into the battle for the fourth playoff spot."
+      ]
+    },
+    {
+      "rank": 7,
+      "team": "Galt",
+      "manager": "Lee Galt",
+      "character": "Buddy the Elf",
+      "movie": "Elf",
+      "movie_year": "2003",
+      "record": "3-6",
+      "power_score": 56.3,
+      "power_rank_change": 0,
+      "power_score_change": 3.37,
+      "power_record": "35-46",
+      "points_for": 912.9,
+      "points_against": 985.0,
+      "avg_weekly_score": 101.4,
+      "body": [
+        "Buddy the Elf arrived in New York City convinced that everything was wonderful, everybody was his friend, and there was absolutely no reason to question his understanding of the world. He was a grown man behaving like a child who'd consumed approximately six pounds of sugar and discovered the concept of traffic for the first time.",
+        "Galt finally found somebody willing to participate in his version of reality, defeating E 110.5–61.5. Brock Purdy threw for 232 yards and two touchdowns, Jonah Coleman contributed in the backfield, and the Bears defense helped offset a zero from Adonai Mitchell despite seven targets. Lee scored enough to finish in the top half of the league while his opponent managed the lowest total of the week.",
+        "The victory improved Lee to 3-6, although his 35-46 power record suggests he hasn't exactly been dominating the competition. His season has also been unusually frustrating, with actual results falling short of what his weekly scoring comparisons would suggest.",
+        "Like Hud, **Lee is sitting on 99 career victories, including the playoffs**, making his next win the 100th of his Greenville Natives career. Buddy would probably celebrate with a parade through Manhattan, several gallons of maple syrup, and an entirely inappropriate number of hugs for strangers.",
+        "Unfortunately, Lee's next opponent is Trey, who's sitting at 8-1 despite an offense that hasn't exactly been terrifying anybody. Reaching 100 wins by knocking off one of the league leaders would be a much better accomplishment than celebrating a 49-point victory over a team that barely remembered to score."
+      ]
+    },
+    {
+      "rank": 8,
+      "team": "Clod",
+      "manager": "Cody Clodfelter",
+      "character": "Ashley Schaeffer",
+      "movie": "Eastbound & Down",
+      "movie_year": "2009–2013",
+      "record": "3-6",
+      "power_score": 51.0,
+      "power_rank_change": 0,
+      "power_score_change": -1.68,
+      "power_record": "29-52",
+      "points_for": 851.8,
+      "points_against": 1039.3,
+      "avg_weekly_score": 94.6,
+      "body": [
+        "Ashley Schaeffer was an obnoxiously wealthy BMW dealership owner with ridiculous white hair, an unhealthy obsession with Kenny Powers, and the confidence of a man who'd never been told to shut the fuck up. He spent his days showing off expensive German automobiles and convincing everybody that Ashley Schaeffer BMW was the finest establishment on the planet.",
+        "Cody is still walking around with last year's championship trophy while his current franchise looks like a used-car lot full of flood-damaged vehicles.",
+        "The defending champion scored a pathetic 69.2 points against Trey, with Jared Goff managing 5.3, Malik Nabers contributing just 6.8, and not a single offensive starter reaching double digits. The Bills defense somehow became his highest-scoring starter, which is the kind of thing that should prompt an immediate investigation into whether the dealership has been selling cars with the engines missing.",
+        "Cody's 29-52 power record is third-worst in the league, and his 851.8 points scored are better than only E and Shain. He's now 3-6 after winning the championship last season, a remarkable transformation from defending champion to a man who should probably be standing outside the dealership holding an inflatable tube man and begging somebody to come inside.",
+        "The championship trophy might still be sitting in Cody's showroom, but the inventory has gone downhill considerably. Another loss against Hud could leave Ashley Schaeffer explaining to prospective customers that he used to operate a prestigious establishment before everything went to absolute shit."
+      ]
+    },
+    {
+      "rank": 9,
+      "team": "E",
+      "manager": "Ian Baro",
+      "character": "Steve Butabi",
+      "movie": "A Night at the Roxbury",
+      "movie_year": "1998",
+      "record": "3-6",
+      "power_score": 48.1,
+      "power_rank_change": 0,
+      "power_score_change": -4.15,
+      "power_record": "25-56",
+      "points_for": 824.2,
+      "points_against": 999.5,
+      "avg_weekly_score": 91.6,
+      "body": [
+        "Steve Butabi spent most of *A Night at the Roxbury* trying to get into exclusive nightclubs with his brother Doug, repeatedly getting rejected by bouncers who had absolutely no interest in letting two hopeless assholes through the front door.",
+        "E's season has been one long night standing outside the velvet rope.",
+        "He scored 61.5 against Galt, the lowest total of Week 9 and his worst performance of the season. Jonathan Taylor struggled, Justin Jefferson couldn't get much going, and Josh Jacobs managed just 0.5 fantasy points after fracturing a finger early in Green Bay's game against New England. Jacobs now requires surgery, with his return timeline uncertain, leaving E without another player he desperately needs to produce.",
+        "E ranks dead last in total points scored with 824.2 and owns a 25-56 power record. He's averaging just 91.6 points per game, making him the least productive offense in the league. Even Shain has scored more points, which is the fantasy equivalent of watching Doug Butabi somehow get into the club while Steve gets turned away for wearing the wrong fucking shoes.",
+        "The worst part is that E has enough recognizable names on his roster to convince himself that a turnaround is coming. Unfortunately, Steve Butabi spent an entire movie convincing himself he was moments away from becoming a nightclub legend, and we all saw how that worked out. Potter awaits in Week 10, and E might want to stop practicing his head-bobbing dance long enough to figure out how his offense is supposed to score points."
+      ]
+    },
+    {
+      "rank": 10,
+      "team": "Shain",
+      "manager": "Shain Collins",
+      "character": "Mugatu",
+      "movie": "Zoolander",
+      "movie_year": "2001",
+      "record": "1-8",
+      "power_score": 40.3,
+      "power_rank_change": 0,
+      "power_score_change": -0.55,
+      "power_record": "20-61",
+      "points_for": 826.9,
+      "points_against": 996.1,
+      "avg_weekly_score": 91.9,
+      "body": [
+        "Jacobim Mugatu was a lunatic fashion designer with enormous confidence, ridiculous ideas, and a remarkable inability to understand why the rest of the world didn't appreciate his genius. This was, after all, the man who invented the **keyboard necktie**, a fashion accessory that somehow combined the functionality of a computer keyboard with the timeless elegance of looking like a complete fucking idiot.",
+        "Shain has spent nine weeks producing the fantasy football equivalent of Mugatu's latest collection: expensive, confusing, and completely fucking useless.",
+        "Shain lost 105.4–93.6 to Hud despite Javonte Williams rushing for 101 yards and providing one of the few respectable performances in the lineup. Ashton Jeanty managed just 4.5 fantasy points, Dalton Kincaid struggled, and Shain once again failed to reach 100. To make matters worse, Michael Wilson fractured a bone in his neck against Seattle and has been ruled out for the remainder of the season, another blow to an offense already averaging just 91.9 points per game.",
+        "At 1-8, Shain owns the league's worst record and a 20-61 power record. He's outscored the rest of the league in fewer than one-quarter of his possible weekly head-to-head comparisons. The historical achievement he's currently chasing is considerably less prestigious than 100 career wins: avoiding the possibility of finishing with one of the worst records in Greenville Natives history.",
+        "Mugatu believed he was creating revolutionary fashion while everybody around him could plainly see that he'd lost his fucking mind. Shain has four weeks to create something resembling a competitive fantasy football team before his only remaining runway is the walk to the first tee carrying somebody else's clubs."
+      ]
+    }
+  ],
+  "week9_results": [
+    {
+      "winner": "Rex",
+      "loser": "Potter",
+      "winner_score": 172.5,
+      "loser_score": 143.5,
+      "margin": 29.0,
+      "combined": 316.0,
+      "marks": [
+        "Dunked On",
+        "Slug Fest"
+      ]
+    },
+    {
+      "winner": "Waivers",
+      "loser": "T Wood",
+      "winner_score": 120.8,
+      "loser_score": 102.6,
+      "margin": 18.2,
+      "combined": 223.4,
+      "marks": []
+    },
+    {
+      "winner": "Galt",
+      "loser": "E",
+      "winner_score": 110.5,
+      "loser_score": 61.5,
+      "margin": 49.0,
+      "combined": 172.0,
+      "marks": [
+        "Dunked On",
+        "Blow Out",
+        "Pillow Fight"
+      ]
+    },
+    {
+      "winner": "Trey",
+      "loser": "Clod",
+      "winner_score": 103.3,
+      "loser_score": 69.2,
+      "margin": 34.1,
+      "combined": 172.5,
+      "marks": [
+        "Dunked On",
+        "Pillow Fight"
+      ]
+    },
+    {
+      "winner": "Hud",
+      "loser": "Shain",
+      "winner_score": 105.4,
+      "loser_score": 93.6,
+      "margin": 11.8,
+      "combined": 199.0,
+      "marks": []
+    }
+  ],
+  "ricky_bobby": {
+    "week": 9,
+    "recipient": "Potter",
+    "award": "The Ricky Bobby Award",
+    "movie": "Talladega Nights: The Ballad of Ricky Bobby",
+    "movie_year": "2006",
+    "text": [
+      "Potter put up 143.5 points against Rex in Week 9 and still lost by 29. He was the second-highest-scoring team in the entire league, but unfortunately drew the one opponent he couldn't beat. Against any of the other eight managers, Potter would've walked away with a victory.",
+      "As Ricky Bobby's daddy famously taught him, \"If you ain't first, you're last.\"",
+      "The Ricky Bobby Award recognizes the special kind of fantasy football bullshit where the second-highest scorer faces the week's highest scorer, making defeat unavoidable regardless of which other manager he could've played."
+    ],
+    "all_time": [
+      {
+        "manager": "Trey Wilder",
+        "awards": 5
+      },
+      {
+        "manager": "Rex",
+        "awards": 4
+      },
+      {
+        "manager": "Mark Potter",
+        "awards": 3
+      },
+      {
+        "manager": "Michael Waivers",
+        "awards": 3
+      },
+      {
+        "manager": "Josh Hudson",
+        "awards": 2
+      },
+      {
+        "manager": "T Wood",
+        "awards": 2
+      },
+      {
+        "manager": "Ian Baro",
+        "awards": 2
+      },
+      {
+        "manager": "Cody Clodfelter",
+        "awards": 2
+      },
+      {
+        "manager": "Lee Galt",
+        "awards": 1
+      },
+      {
+        "manager": "Shain Collins",
+        "awards": 1
+      },
+      {
+        "manager": "Zack Bullock",
+        "awards": 1
+      }
+    ],
+    "total": 26,
+    "after": [
+      "Potter's first two awards came in consecutive weeks to open the 2024 season, courtesy of Shain and Rex. Now Rex has personally delivered another one, making him responsible for two-thirds of Potter's career Ricky Bobby Awards.",
+      "If this keeps happening, we'll have to rename the fucking thing after Potter. He went 15 seasons without winning one, then collected three in barely two years."
+    ]
+  },
+  "week10_preview": {
+    "intro": "Four weeks remain. Four championship playoff spots. Two Caddy Bowl participants.",
+    "matchups": [
+      {
+        "label": "Main Event — The Annual Taylor Bowl",
+        "subtitle": "Ron Burgundy vs. Frank the Tank",
+        "data_source": "WriteupStats",
+        "side_a": {
+          "team": "Rex",
+          "manager": "Taylor Hardee",
+          "season_record": "8-1",
+          "season_pf": 1245.0,
+          "season_pa": 903.5,
+          "h2h_record": "16-14",
+          "h2h_reg": "14-11",
+          "h2h_playoff": "2-3",
+          "h2h_points": 3901.4,
+          "h2h_ppg": 130.0,
+          "h2h_reg_ppg": 113.7,
+          "h2h_point_diff": 83.5,
+          "h2h_current_streak": 0,
+          "h2h_longest_streak": 4,
+          "h2h_biggest_win_margin": 57.1,
+          "marks": {
+            "buzzer_beater": 0,
+            "nail_biter": 5,
+            "dunked_on": 3,
+            "blow_out": 3,
+            "slug_fest": 2,
+            "pillow_fight": 3
+          }
+        },
+        "side_b": {
+          "team": "T Wood",
+          "manager": "T Wood",
+          "season_record": "6-3",
+          "season_pf": 1023.3,
+          "season_pa": 926.3,
+          "h2h_record": "14-16",
+          "h2h_reg": "11-14",
+          "h2h_playoff": "3-2",
+          "h2h_points": 3817.9,
+          "h2h_ppg": 127.3,
+          "h2h_reg_ppg": 106.7,
+          "h2h_point_diff": -83.5,
+          "h2h_current_streak": 1,
+          "h2h_longest_streak": 3,
+          "h2h_biggest_win_margin": 74.3,
+          "marks": {
+            "buzzer_beater": 0,
+            "nail_biter": 3,
+            "dunked_on": 3,
+            "blow_out": 1,
+            "slug_fest": 0,
+            "pillow_fight": 1
+          }
+        },
+        "text": [
+          "Forget the standings. This is the **Annual Taylor Bowl**, where two grown men named Taylor compete for the right to be called **Taylor 1, the Best Taylor, or the Taller Taylor** until their next meeting.",
+          "Rex leads the series 16-14, but Wood owns the playoff edge at 3-2 and won the most recent meeting. Rex has the better record and the stronger offense, and he's chasing Wood's scoring-average record on top of it. A Rex win strengthens his grip on first place; a Wood win improves his playoff position and gives him another year's worth of material to be an insufferable asshole.",
+          "**Two Taylors enter. One leaves as Taylor 1. The other is just Taylor 2.**"
+        ]
+      },
+      {
+        "label": "Trey (8-1) vs. Galt (3-6)",
+        "subtitle": "Chazz Michael Michaels vs. Buddy the Elf",
+        "data_source": "WriteupStats",
+        "side_a": {
+          "team": "Trey",
+          "manager": "Trey Wilder",
+          "season_record": "8-1",
+          "season_pf": 1005.0,
+          "season_pa": 820.5,
+          "h2h_record": "12-11",
+          "h2h_reg": "12-9",
+          "h2h_playoff": "0-2",
+          "h2h_points": 2702.1,
+          "h2h_ppg": 117.5,
+          "h2h_reg_ppg": 108.5,
+          "h2h_point_diff": 47.0,
+          "h2h_current_streak": 3,
+          "h2h_longest_streak": 3,
+          "h2h_biggest_win_margin": 133.0,
+          "marks": {
+            "buzzer_beater": 0,
+            "nail_biter": 0,
+            "dunked_on": 2,
+            "blow_out": 1,
+            "slug_fest": 2,
+            "pillow_fight": 2
+          }
+        },
+        "side_b": {
+          "team": "Galt",
+          "manager": "Lee Galt",
+          "season_record": "3-6",
+          "season_pf": 912.9,
+          "season_pa": 985.0,
+          "h2h_record": "11-12",
+          "h2h_reg": "9-12",
+          "h2h_playoff": "2-0",
+          "h2h_points": 2655.1,
+          "h2h_ppg": 115.4,
+          "h2h_reg_ppg": 102.0,
+          "h2h_point_diff": -47.0,
+          "h2h_current_streak": 0,
+          "h2h_longest_streak": 3,
+          "h2h_biggest_win_margin": 33.4,
+          "marks": {
+            "buzzer_beater": 0,
+            "nail_biter": 1,
+            "dunked_on": 3,
+            "blow_out": 0,
+            "slug_fest": 0,
+            "pillow_fight": 2
+          }
+        },
+        "text": [
+          "Trey is trying to keep pace with Rex while Lee desperately needs a win to stay in the playoff conversation. Trey owns the regular-season series and carries a three-game win streak over Galt into this one, but Galt is a perfect 2-0 against him in the playoffs.",
+          "A Galt victory would also be his 100th career win, giving Buddy the Elf a legitimate reason to celebrate something other than Christmas."
+        ]
+      },
+      {
+        "label": "Potter (5-4) vs. E (3-6)",
+        "subtitle": "Brad Whitaker vs. Steve Butabi",
+        "data_source": "WriteupStats",
+        "side_a": {
+          "team": "Potter",
+          "manager": "Mark Potter",
+          "season_record": "5-4",
+          "season_pf": 1106.1,
+          "season_pa": 1061.9,
+          "h2h_record": "9-11",
+          "h2h_reg": "8-9",
+          "h2h_playoff": "1-2",
+          "h2h_points": 2545.7,
+          "h2h_ppg": 127.3,
+          "h2h_reg_ppg": 112.1,
+          "h2h_point_diff": -45.2,
+          "h2h_current_streak": 4,
+          "h2h_longest_streak": 4,
+          "h2h_biggest_win_margin": 46.1,
+          "marks": {
+            "buzzer_beater": 0,
+            "nail_biter": 1,
+            "dunked_on": 3,
+            "blow_out": 1,
+            "slug_fest": 0,
+            "pillow_fight": 0
+          }
+        },
+        "side_b": {
+          "team": "E",
+          "manager": "Ian Baro",
+          "season_record": "3-6",
+          "season_pf": 824.2,
+          "season_pa": 999.5,
+          "h2h_record": "11-9",
+          "h2h_reg": "9-8",
+          "h2h_playoff": "2-1",
+          "h2h_points": 2590.9,
+          "h2h_ppg": 129.5,
+          "h2h_reg_ppg": 113.3,
+          "h2h_point_diff": 45.2,
+          "h2h_current_streak": 0,
+          "h2h_longest_streak": 8,
+          "h2h_biggest_win_margin": 45.4,
+          "marks": {
+            "buzzer_beater": 1,
+            "nail_biter": 0,
+            "dunked_on": 3,
+            "blow_out": 2,
+            "slug_fest": 2,
+            "pillow_fight": 0
+          }
+        },
+        "text": [
+          "Potter has the league's second-best power record but only five actual wins, while E has scored fewer points than anybody else. E still leads the all-time series 11-9, but Potter has won four straight against him.",
+          "Brad Whitaker has finally found somebody less impressive than Mark Wahlberg, and if he can't beat Steve Butabi, he might as well surrender custody of the fucking children."
+        ]
+      },
+      {
+        "label": "Waivers (4-5) vs. Shain (1-8)",
+        "subtitle": "Allen Gamble vs. Mugatu",
+        "data_source": "WriteupStats",
+        "side_a": {
+          "team": "Waivers",
+          "manager": "Michael Waivers",
+          "season_record": "4-5",
+          "season_pf": 1012.4,
+          "season_pa": 1012.1,
+          "h2h_record": "15-10",
+          "h2h_reg": "14-9",
+          "h2h_playoff": "1-1",
+          "h2h_points": 2903.9,
+          "h2h_ppg": 116.2,
+          "h2h_reg_ppg": 107.6,
+          "h2h_point_diff": 42.1,
+          "h2h_current_streak": 3,
+          "h2h_longest_streak": 5,
+          "h2h_biggest_win_margin": 50.2,
+          "marks": {
+            "buzzer_beater": 0,
+            "nail_biter": 0,
+            "dunked_on": 6,
+            "blow_out": 2,
+            "slug_fest": 2,
+            "pillow_fight": 3
+          }
+        },
+        "side_b": {
+          "team": "Shain",
+          "manager": "Shain Collins",
+          "season_record": "1-8",
+          "season_pf": 826.9,
+          "season_pa": 996.1,
+          "h2h_record": "10-15",
+          "h2h_reg": "9-14",
+          "h2h_playoff": "1-1",
+          "h2h_points": 2861.8,
+          "h2h_ppg": 114.5,
+          "h2h_reg_ppg": 103.6,
+          "h2h_point_diff": -42.1,
+          "h2h_current_streak": 0,
+          "h2h_longest_streak": 3,
+          "h2h_biggest_win_margin": 56.4,
+          "marks": {
+            "buzzer_beater": 0,
+            "nail_biter": 1,
+            "dunked_on": 5,
+            "blow_out": 2,
+            "slug_fest": 0,
+            "pillow_fight": 3
+          }
+        },
+        "text": [
+          "Waivers can reach .500 after starting 1-4, while Shain desperately needs a win to avoid sinking deeper toward the Caddy Bowl. Waivers leads the all-time series 15-10 and has won three straight against him, though Shain has never been easy to put away in the playoffs, where they're split 1-1.",
+          "Gator has an excellent opportunity to continue his playoff push against a man whose season has been one continuous fashion disaster."
+        ]
+      },
+      {
+        "label": "Hud (4-5) vs. Clod (3-6)",
+        "subtitle": "Jackie Moon vs. Ashley Schaeffer",
+        "data_source": "WriteupStats",
+        "side_a": {
+          "team": "Hud",
+          "manager": "Josh Hudson",
+          "season_record": "4-5",
+          "season_pf": 935.9,
+          "season_pa": 999.3,
+          "h2h_record": "6-11",
+          "h2h_reg": "6-10",
+          "h2h_playoff": "0-1",
+          "h2h_points": 1920.0,
+          "h2h_ppg": 112.9,
+          "h2h_reg_ppg": 106.7,
+          "h2h_point_diff": -62.3,
+          "h2h_current_streak": 1,
+          "h2h_longest_streak": 2,
+          "h2h_biggest_win_margin": 36.8,
+          "marks": {
+            "buzzer_beater": 0,
+            "nail_biter": 0,
+            "dunked_on": 3,
+            "blow_out": 1,
+            "slug_fest": 0,
+            "pillow_fight": 0
+          }
+        },
+        "side_b": {
+          "team": "Clod",
+          "manager": "Cody Clodfelter",
+          "season_record": "3-6",
+          "season_pf": 851.8,
+          "season_pa": 1039.3,
+          "h2h_record": "11-6",
+          "h2h_reg": "10-6",
+          "h2h_playoff": "1-0",
+          "h2h_points": 1982.3,
+          "h2h_ppg": 116.6,
+          "h2h_reg_ppg": 108.1,
+          "h2h_point_diff": 62.3,
+          "h2h_current_streak": 0,
+          "h2h_longest_streak": 3,
+          "h2h_biggest_win_margin": 74.7,
+          "marks": {
+            "buzzer_beater": 0,
+            "nail_biter": 0,
+            "dunked_on": 4,
+            "blow_out": 0,
+            "slug_fest": 2,
+            "pillow_fight": 4
+          }
+        },
+        "text": [
+          "Hud needs a win to stay within reach of the fourth playoff spot, while Cody needs to stop his title defense from becoming a Caddy Bowl campaign. Cody leads the series 11-6 and beat Hud in last year's championship game, which is exactly why No. 100 would taste so good.",
+          "The defending champion's showroom has been looking more like a liquidation sale with each passing week."
+        ]
+      }
+    ]
+  },
+  "mark_definitions": {
+    "buzzer_beater": "margin < 1",
+    "nail_biter": "1 < margin < 5",
+    "dunked_on": "margin > 20",
+    "blow_out": "margin > 40",
+    "slug_fest": "combined > 250",
+    "pillow_fight": "combined < 180"
+  }
+}
