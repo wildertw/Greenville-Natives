@@ -192,39 +192,596 @@
       ]
     }
   ],
+  "week11_results": [
+    {
+      "winner": "Galt",
+      "loser": "Potter",
+      "winner_score": 141.4,
+      "loser_score": 102.9,
+      "margin": 38.5,
+      "combined": 244.3,
+      "marks": [
+        "Dunked On"
+      ]
+    },
+    {
+      "winner": "Clod",
+      "loser": "T Wood",
+      "winner_score": 118.0,
+      "loser_score": 99.4,
+      "margin": 18.6,
+      "combined": 217.4,
+      "marks": []
+    },
+    {
+      "winner": "Hud",
+      "loser": "Waivers",
+      "winner_score": 110.0,
+      "loser_score": 96.5,
+      "margin": 13.5,
+      "combined": 206.5,
+      "marks": []
+    },
+    {
+      "winner": "Trey",
+      "loser": "Rex",
+      "winner_score": 108.1,
+      "loser_score": 99.8,
+      "margin": 8.3,
+      "combined": 207.9,
+      "marks": []
+    },
+    {
+      "winner": "Shain",
+      "loser": "Ian",
+      "winner_score": 94.8,
+      "loser_score": 82.3,
+      "margin": 12.5,
+      "combined": 177.1,
+      "marks": [
+        "Pillow Fight"
+      ]
+    }
+  ],
   "week12_preview": {
     "matchups": [
       {
         "label": "Trey (9–2) vs. Hud (6–5)",
+        "teams": [
+          "Trey",
+          "Hud"
+        ],
+        "stats": [
+          [
+            "Season record",
+            "9-2",
+            "6-5"
+          ],
+          [
+            "Season points for",
+            "1,238.6",
+            "1,196.8"
+          ],
+          [
+            "Season points against",
+            "1,058.6",
+            "1,191.1"
+          ],
+          [
+            "All-time H2H record",
+            "12-15",
+            "15-12"
+          ],
+          [
+            "Regular-season H2H",
+            "12-14",
+            "14-12"
+          ],
+          [
+            "Playoff H2H",
+            "0-1",
+            "1-0"
+          ],
+          [
+            "H2H points scored",
+            "2,904.7",
+            "2,961.9"
+          ],
+          [
+            "H2H PPG",
+            "107.6",
+            "109.7"
+          ],
+          [
+            "H2H PPG (regular season)",
+            "103.2",
+            "104.4"
+          ],
+          [
+            "H2H point differential",
+            "-57.2",
+            "+57.2"
+          ],
+          [
+            "Current H2H win streak",
+            "1",
+            "0"
+          ],
+          [
+            "Longest H2H win streak",
+            "3",
+            "4"
+          ],
+          [
+            "Biggest H2H win margin",
+            "64.0",
+            "58.8"
+          ],
+          [
+            "Buzzer Beaters",
+            "0",
+            "0"
+          ],
+          [
+            "Nail Biters",
+            "1",
+            "1"
+          ],
+          [
+            "Dunked On",
+            "3",
+            "3"
+          ],
+          [
+            "Blow Outs",
+            "3",
+            "3"
+          ],
+          [
+            "Slug Fests",
+            "2",
+            "0"
+          ],
+          [
+            "Pillow Fights",
+            "1",
+            "4"
+          ]
+        ],
         "text": [
           "I won the first one **93.7–83.3**. Hud controls his playoff spot by winning out, which means the first time Dak throws a touchdown Thursday I’m going to hear from Potter, Waivers and Galt, three men who have never previously shown much interest in how my Thanksgiving is going."
         ]
       },
       {
         "label": "Waivers (5–6) vs. Galt (5–6)",
+        "teams": [
+          "Waivers",
+          "Galt"
+        ],
+        "stats": [
+          [
+            "Season record",
+            "5-6",
+            "5-6"
+          ],
+          [
+            "Season points for",
+            "1,262.3",
+            "1,192.6"
+          ],
+          [
+            "Season points against",
+            "1,206.4",
+            "1,213.4"
+          ],
+          [
+            "All-time H2H record",
+            "12-11",
+            "11-12"
+          ],
+          [
+            "Regular-season H2H",
+            "11-11",
+            "11-11"
+          ],
+          [
+            "Playoff H2H",
+            "1-0",
+            "0-1"
+          ],
+          [
+            "H2H points scored",
+            "2,454.6",
+            "2,608.7"
+          ],
+          [
+            "H2H PPG",
+            "106.7",
+            "113.4"
+          ],
+          [
+            "H2H PPG (regular season)",
+            "102.2",
+            "109.3"
+          ],
+          [
+            "H2H point differential",
+            "-154.1",
+            "+154.1"
+          ],
+          [
+            "Current H2H win streak",
+            "1",
+            "0"
+          ],
+          [
+            "Longest H2H win streak",
+            "2",
+            "2"
+          ],
+          [
+            "Biggest H2H win margin",
+            "33.5",
+            "71.0"
+          ],
+          [
+            "Buzzer Beaters",
+            "0",
+            "1"
+          ],
+          [
+            "Nail Biters",
+            "2",
+            "0"
+          ],
+          [
+            "Dunked On",
+            "5",
+            "5"
+          ],
+          [
+            "Blow Outs",
+            "0",
+            "3"
+          ],
+          [
+            "Slug Fests",
+            "1",
+            "0"
+          ],
+          [
+            "Pillow Fights",
+            "3",
+            "0"
+          ]
+        ],
         "text": [
           "Waivers leads the all-time series **12–11**. Galt can even it up and head straight into another playoff fight with Hud, while the loser needs Hud to drop both remaining games just to catch him."
         ]
       },
       {
         "label": "Ian (4–7) vs. T Wood (7–4)",
+        "teams": [
+          "Ian",
+          "T Wood"
+        ],
+        "stats": [
+          [
+            "Season record",
+            "4-7",
+            "7-4"
+          ],
+          [
+            "Season points for",
+            "1,030.2",
+            "1,291.7"
+          ],
+          [
+            "Season points against",
+            "1,200.3",
+            "1,101.9"
+          ],
+          [
+            "All-time H2H record",
+            "11-9",
+            "9-11"
+          ],
+          [
+            "Regular-season H2H",
+            "10-9",
+            "9-10"
+          ],
+          [
+            "Playoff H2H",
+            "1-0",
+            "0-1"
+          ],
+          [
+            "H2H points scored",
+            "2,110.7",
+            "2,198.7"
+          ],
+          [
+            "H2H PPG",
+            "105.5",
+            "109.9"
+          ],
+          [
+            "H2H PPG (regular season)",
+            "99.8",
+            "106.0"
+          ],
+          [
+            "H2H point differential",
+            "-88.0",
+            "+88.0"
+          ],
+          [
+            "Current H2H win streak",
+            "0",
+            "1"
+          ],
+          [
+            "Longest H2H win streak",
+            "2",
+            "2"
+          ],
+          [
+            "Biggest H2H win margin",
+            "53.2",
+            "82.2"
+          ],
+          [
+            "Buzzer Beaters",
+            "0",
+            "0"
+          ],
+          [
+            "Nail Biters",
+            "1",
+            "1"
+          ],
+          [
+            "Dunked On",
+            "4",
+            "4"
+          ],
+          [
+            "Blow Outs",
+            "1",
+            "3"
+          ],
+          [
+            "Slug Fests",
+            "0",
+            "0"
+          ],
+          [
+            "Pillow Fights",
+            "1",
+            "3"
+          ]
+        ],
         "text": [
           "Wood escaped **97.4–95** in their first meeting. Three more points from Ian’s defense would’ve flipped it, which between the 89th- and 90th-ranked D/ST seasons on record apparently qualifies as asking somebody to be the ’85 Bears."
         ]
       },
       {
         "label": "Rex (8–3) vs. Clod (4–7)",
+        "teams": [
+          "Rex",
+          "Clod"
+        ],
+        "stats": [
+          [
+            "Season record",
+            "8-3",
+            "4-7"
+          ],
+          [
+            "Season points for",
+            "1,402.4",
+            "1,065.1"
+          ],
+          [
+            "Season points against",
+            "1,180.6",
+            "1,289.6"
+          ],
+          [
+            "All-time H2H record",
+            "10-13",
+            "13-10"
+          ],
+          [
+            "Regular-season H2H",
+            "7-12",
+            "12-7"
+          ],
+          [
+            "Playoff H2H",
+            "3-1",
+            "1-3"
+          ],
+          [
+            "H2H points scored",
+            "3,011.4",
+            "2,805.0"
+          ],
+          [
+            "H2H PPG",
+            "130.9",
+            "122.0"
+          ],
+          [
+            "H2H PPG (regular season)",
+            "106.2",
+            "109.1"
+          ],
+          [
+            "H2H point differential",
+            "+206.4",
+            "-206.4"
+          ],
+          [
+            "Current H2H win streak",
+            "1",
+            "0"
+          ],
+          [
+            "Longest H2H win streak",
+            "1",
+            "5"
+          ],
+          [
+            "Biggest H2H win margin",
+            "69.1",
+            "57.7"
+          ],
+          [
+            "Buzzer Beaters",
+            "0",
+            "0"
+          ],
+          [
+            "Nail Biters",
+            "1",
+            "2"
+          ],
+          [
+            "Dunked On",
+            "2",
+            "4"
+          ],
+          [
+            "Blow Outs",
+            "3",
+            "3"
+          ],
+          [
+            "Slug Fests",
+            "0",
+            "0"
+          ],
+          [
+            "Pillow Fights",
+            "2",
+            "0"
+          ]
+        ],
         "text": [
           "Rex won the first meeting **156.1–93.6**. Clod already avenged one September ass-kicking, and another would send him into the finale playing for win 100 while giving me a chance to clinch first."
         ]
       },
       {
         "label": "Potter (5–6) vs. Shain (2–9)",
+        "teams": [
+          "Potter",
+          "Shain"
+        ],
+        "stats": [
+          [
+            "Season record",
+            "5-6",
+            "2-9"
+          ],
+          [
+            "Season points for",
+            "1,315.0",
+            "1,006.0"
+          ],
+          [
+            "Season points against",
+            "1,327.0",
+            "1,231.8"
+          ],
+          [
+            "All-time H2H record",
+            "14-11",
+            "11-14"
+          ],
+          [
+            "Regular-season H2H",
+            "12-11",
+            "11-12"
+          ],
+          [
+            "Playoff H2H",
+            "2-0",
+            "0-2"
+          ],
+          [
+            "H2H points scored",
+            "3,040.3",
+            "2,940.6"
+          ],
+          [
+            "H2H PPG",
+            "121.6",
+            "117.6"
+          ],
+          [
+            "H2H PPG (regular season)",
+            "111.7",
+            "110.6"
+          ],
+          [
+            "H2H point differential",
+            "+99.7",
+            "-99.7"
+          ],
+          [
+            "Current H2H win streak",
+            "1",
+            "0"
+          ],
+          [
+            "Longest H2H win streak",
+            "4",
+            "5"
+          ],
+          [
+            "Biggest H2H win margin",
+            "53.6",
+            "77.1"
+          ],
+          [
+            "Buzzer Beaters",
+            "1",
+            "0"
+          ],
+          [
+            "Nail Biters",
+            "0",
+            "1"
+          ],
+          [
+            "Dunked On",
+            "5",
+            "4"
+          ],
+          [
+            "Blow Outs",
+            "2",
+            "2"
+          ],
+          [
+            "Slug Fests",
+            "2",
+            "0"
+          ],
+          [
+            "Pillow Fights",
+            "1",
+            "1"
+          ]
+        ],
         "text": [
           "Potter won the opener **135.3–96.5**. A sweep sends Shain to the Caddy Bowl. A split sends a five-time champion to 5–7, at which point I think we can safely give Shain permission to pick the music."
         ]
       }
     ]
   },
+  "marks_note": "Marks are credited to the winning side as listed in WriteupStats. Definitions: Buzzer Beater = margin under 1; Nail Biter = over 1 and under 5; Dunked On = over 20; Blow Out = over 40; Slug Fest = combined over 250; Pillow Fight = combined under 180.",
   "methodology_note": "Rankings follow the notebook’s Weekly Power Rankings tab. Odds come from 10,000 simulations of the remaining schedule using season scoring averages, variability and earlier bye adjustments. Neither Clod nor Ian made the playoffs in that run, though both have a mathematical path. Injury notes reflect the November 24 reports and aren’t incorporated into the percentages."
 }
