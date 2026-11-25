@@ -1,7 +1,7 @@
 # Manager headshots
 
 Drop one image per manager in this folder (PNG, square, face centered; they display as circles).
-Until a file exists, the site shows the manager's colored initials instead.
+Each image is already a circular head with its own ring; it is shown over a transparent background. If a file is missing, the site falls back to the manager's colored initials.
 
 | Manager | File |
 |---|---|
