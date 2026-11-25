@@ -1,0 +1,947 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>9–2, So We’re Doing ’92 · Week 11 | Greenville Natives</title>
+  <meta name="description" content="Greenville Natives · 2026 Season · Week 11 Recap & Week 12 Preview" />
+  <style>
+    :root{
+      --bg:#0b1220; --panel:rgba(255,255,255,.06); --panel2:rgba(255,255,255,.09);
+      --text:rgba(255,255,255,.92); --muted:rgba(255,255,255,.70); --border:rgba(255,255,255,.12);
+      --accent:#8b5cf6; --good:#22c55e; --bad:#ef4444; --radius:16px; --max:900px;
+      --sans:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+    }
+    [data-theme="light"]{
+      --bg:#f7f7fb; --panel:rgba(0,0,0,.04); --panel2:rgba(0,0,0,.06);
+      --text:rgba(0,0,0,.88); --muted:rgba(0,0,0,.60); --border:rgba(0,0,0,.10);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:var(--sans);color:var(--text);line-height:1.6;
+      background:radial-gradient(1000px 600px at 15% -10%,rgba(139,92,246,.22),transparent 55%),
+                 radial-gradient(900px 520px at 90% 0%,rgba(34,197,94,.14),transparent 55%),var(--bg);}
+    a{color:inherit}
+    .container{width:min(var(--max),calc(100% - 32px));margin:0 auto}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 0}
+    .btn{border:1px solid var(--border);background:var(--panel);color:var(--text);border-radius:12px;padding:8px 12px;font:inherit;cursor:pointer;text-decoration:none}
+    h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:8px 0 6px}
+    h2.section{font-size:24px;margin:44px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+    .sub{color:var(--muted);margin:0 0 18px}
+    .hero{border:2px dashed var(--border);border-radius:var(--radius);min-height:200px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);padding:20px;margin:12px 0 24px;background:var(--panel)}
+    .hero img{max-width:100%;border-radius:var(--radius);display:block}
+    .card{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin:0 0 16px}
+    .card h3{margin:0;font-size:20px}
+    .rankNum{display:inline-block;min-width:2ch;color:var(--accent);font-weight:800}
+    .movie{color:var(--muted);font-style:italic;margin:2px 0 10px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+    .chip{background:var(--panel2);border:1px solid var(--border);border-radius:999px;padding:3px 10px;font-size:13px}
+    .up{color:var(--good)} .down{color:var(--bad)}
+    .card p,.prose p{margin:0 0 12px}
+    .tableWrap{overflow-x:auto;margin:0 0 14px}
+    table{border-collapse:collapse;width:100%;font-size:15px}
+    th,td{padding:8px 10px;border-bottom:1px solid var(--border);text-align:left;white-space:nowrap}
+    td.num,th.num{text-align:right}
+    thead th{color:var(--muted);font-weight:600}
+    tfoot td{font-weight:700}
+    .marks .m{display:inline-block;background:var(--panel2);border:1px solid var(--border);border-radius:6px;padding:1px 7px;font-size:12px;margin-right:4px}
+    .vs{color:var(--muted);margin:0 0 12px;font-style:italic}
+    .fine{color:var(--muted);font-size:13px}
+    footer{padding:30px 0 50px;color:var(--muted);font-size:13px}
+    .song{color:var(--muted);font-style:italic;margin:2px 0 10px}
+    .av{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;border-radius:50%;overflow:hidden;font-weight:800;letter-spacing:.5px;background:var(--bg,#444);color:var(--fg,#fff);box-shadow:0 0 0 2px #0b1220,0 0 0 4px var(--fg,#fff);vertical-align:middle}
+    .av.ok{background:none;box-shadow:none;overflow:visible}
+    .av.ok>span{display:none}
+    .stat th .av.ok{box-shadow:none}
+    .av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .rankHead{display:flex;align-items:center;gap:14px;margin:-18px -18px 14px;padding:14px 18px;border-radius:var(--radius) var(--radius) 0 0;background:var(--bg);color:var(--fg)}
+    .rankHead h3{color:var(--fg)}
+    .rankHead .rankNum{color:var(--fg);opacity:.85}
+    .rankHead .song{color:var(--fg);opacity:.85;margin:2px 0 0}
+    .card.mgr{border-color:var(--bg)}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:2px 10px 2px 3px;border-radius:999px;background:var(--bg);color:var(--fg);font-weight:700;font-size:13px}
+    .stat th.mg{background:var(--bg);color:var(--fg)}
+    .stat th .av{margin-right:8px;box-shadow:0 0 0 2px var(--fg)}
+    .stat thead th.mg:first-child{border-radius:0}
+    .sched{color:var(--muted);font-size:14px;margin:0 0 12px;font-style:italic}
+    .quote{border-left:3px solid var(--accent);padding:4px 14px;margin:0 0 14px;font-weight:600}
+    .sched{color:var(--muted);font-size:14px;margin:0 0 12px;font-style:italic}
+    .quote{border-left:3px solid var(--accent);padding:4px 14px;margin:0 0 14px;font-weight:600}
+    .stat th:first-child,.stat td:first-child{width:50%}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+      <a class="btn" href="./index.html#writeups">← All writeups</a>
+      <button class="btn" id="themeBtn" type="button">Theme</button>
+    </div>
+    <div id="app"></div>
+    <footer>Greenville Natives · 2026 Season</footer>
+  </div>
+
+  <script id="writeup-data" type="application/json">{
+  "season": 2026,
+  "week": 11,
+  "title": "9–2, So We’re Doing ’92",
+  "subtitle": "Greenville Natives · 2026 Season · Week 11 Recap & Week 12 Preview",
+  "header_image": null,
+  "branding": "Greenville Natives · 2026 Season",
+  "intro": [
+    "I beat Rex, Clod beat Wood, and I woke up Monday 9–2 and back at number one. So this week we’re doing songs from 1992. Is that a little self-serving? Boys, I built an entire website so you could read what I think about ten fantasy football teams, one of which is mine. I thought we settled that question years ago.",
+    "Roll the tape from Kansas City. Mahomes drops back, finds Kelce, touchdown. Wood jumps up. Clod jumps up. Wood remembers whose tight end that is and sits his ass back down. Now over to Dallas, where Dak finds CeeDee and Waivers gets about half a second to enjoy himself before Hud reminds him how passing touchdowns work. Two games, four managers, and the only guy who got to celebrate a touchdown in peace was Galt, who got three from Jonah Coleman and dedicated every damn one of them to Potter.",
+    "Two regular-season games left. Rex and I are in, Wood needs one more win, and Hud holds the spot three guys at 5–6 want. Meanwhile, Shain beat Ian and earned the right to explain six separate football games to his family over Thanksgiving dinner. Before we get to the mixtape, Hermania would like a word with Ian’s defensive coordinator."
+  ],
+  "hermania": {
+    "heading": "Hermania Bot opens the record book",
+    "quote": "Mmmmmmmm I think… Ian, Galt got 16 points from the Bears on Sunday. You’ve gotten 21 from your defenses since September.",
+    "before": [
+      "Across **90 manager-seasons from 2018 through 2026**, six current managers account for eleven positional totals among the five best or five worst. Everybody gets the same eleven games and the same corrected RB, WR and FLEX assignments."
+    ],
+    "table_head": [
+      "Historical top five",
+      "Points",
+      "Rank",
+      "Historical bottom five",
+      "Points",
+      "Rank"
+    ],
+    "table_rows": [
+      [
+        "Galt · K",
+        "118.0",
+        "2nd-best",
+        "Ian · D/ST",
+        "21.0",
+        "Worst"
+      ],
+      [
+        "T Wood · WR1",
+        "262.6",
+        "3rd-best",
+        "T Wood · D/ST",
+        "38.0",
+        "2nd-worst"
+      ],
+      [
+        "T Wood · RB1",
+        "285.8",
+        "4th-best",
+        "Shain · TE",
+        "53.4",
+        "3rd-worst"
+      ],
+      [
+        "Rex · TE",
+        "158.6",
+        "4th-best",
+        "Ian · TE",
+        "54.0",
+        "4th-worst"
+      ],
+      [
+        "Trey · D/ST",
+        "129.0",
+        "4th-best",
+        "Shain · FLEX",
+        "43.4",
+        "4th-worst"
+      ],
+      [
+        "",
+        "",
+        "",
+        "Galt · FLEX",
+        "44.8",
+        "5th-worst"
+      ]
+    ],
+    "after": [
+      "Clod still owns the RB1 record with **330.0 in 2019**, followed by 2025 Ian (300.4), 2018 me (292.6), this year’s Wood (285.8), and 2019 me (285.4). Wood spent eleven weeks passing one of my teams by four-tenths, then lost to the guy at the top of the list. Appreciate you handling that, Clod."
+    ]
+  },
+  "power_rankings": [
+    {
+      "rank": 1,
+      "team": "Trey",
+      "song": "I Will Always Love You",
+      "artist": "Whitney Houston",
+      "stats": "9–2 · Power score 98.7 · ↑ 2 · Playoffs clinched · Caddy Bowl eliminated",
+      "schedule": "Week 12 vs. Hud · Week 13 vs. Ian",
+      "body": [
+        "Emmett Johnson, if Kenneth Walker coming back means our time together is almost up, there’s something I’d like to say before you go: *“I will always love you.”* The man ran for 105 yards and a touchdown, caught four passes for another 38, and carried me past Rex **108.1–99.8** while my two starting receivers combined for fewer points than James Cook got by himself. Walker’s back at practice, Bhayshul Tuten aggravated his ankle, and suddenly I understand why Whitney took so damn long saying goodbye. Beat Hud and Ian and the one seed is mine, or I can clinch this week with a win and a Clod upset over Rex. For the record, Clod, that earns you a beer."
+      ]
+    },
+    {
+      "rank": 2,
+      "team": "Rex",
+      "song": "My Lovin’ (You’re Never Gonna Get It)",
+      "artist": "En Vogue",
+      "stats": "8–3 · Power score 98.2 · No change · Playoffs clinched · Caddy Bowl eliminated",
+      "schedule": "Week 12 vs. Clod · Week 13 vs. Shain",
+      "body": [
+        "Rex has scored **163.8 more points than me** and would like to know when I plan on handing over first place. I put on **“My Lovin’,”** skipped to *“never gonna get it,”* and let En Vogue handle commissioner correspondence. He had me right there Sunday, but Trevor Lawrence threw for 301 yards with one touchdown and two interceptions against the Giants, leaving Rex 8.3 short and waiting on somebody else to do him a favor. Drake Maye’s ankle is expected to cost him at least six weeks, and Brock Bowers missed Sunday, although I’ll start feeling sorry for Rex at tight end when he gives back one of the three top-four TE seasons he owns. The defending champ still leads the league in scoring despite putting up 172.5 in Week 9 and **157.4 combined** in the two weeks since. Beat Clod and Shain, get one loss from me, and Rex has an excellent chance of sending that song right back to my ass."
+      ]
+    },
+    {
+      "rank": 3,
+      "team": "T Wood",
+      "song": "Jump Around",
+      "artist": "House of Pain",
+      "stats": "7–4 · Power score 94.8 · ↓ 2 · Playoffs 95.43% · Caddy Bowl eliminated",
+      "schedule": "Week 12 vs. Ian · Week 13 vs. Potter",
+      "body": [
+        "*“Jump up, jump up and get down”* turned out to be fairly precise instructions for watching Mahomes throw touchdowns to Clod’s players. By the second one Wood had taken most of the **“Jump Around”** out of his celebration, and by the end he’d gotten 324 passing yards and three scores out of his quarterback in a game he lost by 18.6. Jahmyr Gibbs even ran for 98 yards and two touchdowns, but Emeka Egbuka and Luther Burden combined for 5.1 fantasy points, which is how a man with historic RB1 and WR1 production loses to the guy he held to 58.8 in September. One win clinches, starting with an Ian team Wood escaped by 2.4 the first time. Lose that one and Potter gets him in Week 13 with a playoff spot potentially on the line and a 23.3-point head start if they finish tied."
+      ]
+    },
+    {
+      "rank": 4,
+      "team": "Hud",
+      "song": "It Was a Good Day",
+      "artist": "Ice Cube",
+      "stats": "6–5 · Power score 92.9 · ↑ 2 · Playoffs 34.98% · Caddy Bowl eliminated",
+      "schedule": "Week 12 vs. Trey · Week 13 vs. Galt",
+      "body": [
+        "Waivers got 11 catches, 132 yards and a touchdown from CeeDee Lamb, and Hud got to enjoy the Cowboys game more than he did. Dak Prescott threw for 325 yards and four touchdowns, then ran one in himself so Waivers could see what it looked like when Hud kept the whole damn thing. Mike Evans caught six for 109 and a score, Ja’Marr Chase and Jaylen Warren could’ve split a cab home at halftime, and Hud still picked up career win 101, swept Waivers and took sole possession of fourth. For a man who was 3–5 three Sundays ago, *“today was a good day”* is putting it mildly.",
+        "Beat me and Galt and Hud’s in at 8–5, no favors required. Split and he’d appreciate Potter and Waivers losing at least once apiece, because **118.2** is a hell of a lot of points to owe Potter if they finish with the same record."
+      ]
+    },
+    {
+      "rank": 5,
+      "team": "Waivers",
+      "song": "End of the Road",
+      "artist": "Boyz II Men",
+      "stats": "5–6 · Power score 90.3 · No change · Playoffs 22.72% · Caddy Bowl 0.12%",
+      "schedule": "Week 12 vs. Galt · Week 13 vs. Clod",
+      "body": [
+        "This is where the music drops out of **“End of the Road”** and Waivers gets the deep-voiced talking part to explain why he *“still can’t let go”* of a fantasy football game from September. He scored 127.6 that Sunday and lost to Hud by three, then spent a month digging himself out of a 1–5 hole just to find the same bastard waiting at the top. This time Josh Allen gave him 12 points, Cam Little kicked in 13, and somewhere during Dak’s fifth touchdown Waivers probably would’ve taken the September loss back. Beat Galt and Clod, get at least one loss apiece from Hud and Potter, and Waivers has a strong route to fourth with 65.5 more points than Hud. Lose both while Ian reaches five wins too, and a bad tiebreaker could put Waivers in the Caddy Bowl. Hell of a range of outcomes for that Clod game, from playing for a playoff spot to asking whether the bag has a shoulder strap."
+      ]
+    },
+    {
+      "rank": 6,
+      "team": "Galt",
+      "song": "Nuthin’ but a ‘G’ Thang",
+      "artist": "Dr. Dre featuring Snoop Dogg",
+      "stats": "5–6 · Power score 90.2 · ↑ 1 · Playoffs 11.59% · Caddy Bowl 0.07%",
+      "schedule": "Week 12 vs. Waivers · Week 13 vs. Hud",
+      "body": [
+        "*“One, two, three and to the four”* — easy there, Snoop, Jonah Coleman stopped at three, and by then Potter had seen plenty. Coleman ran for 111 yards and three touchdowns, Tyler Bass kicked in 17, and the Bears defense added 16 as Galt followed 138.3 against me with a season-high **141.4 against Potter**. That’s career wins 100 and 101 at our expense, so yes, Lee, for two Sundays now it’s been **nuthin’ but a G thang**. My favorite part is that his kickers have outscored his FLEX **118.0–44.8** and he still lined up Potter and me back-to-back and beat us like he knew something about football.",
+        "Now Galt gets Waivers and Hud in person: sweep them, get one Potter loss and a win from me over Hud, and he finishes 7–6 ahead of all three. Lose both while Ian and Clod reach five wins and the wrong points tiebreaker could put last year’s caddy back on the bag, so I’d leave the clubs in the truck for another couple weeks."
+      ]
+    },
+    {
+      "rank": 7,
+      "team": "Potter",
+      "song": "Everybody Hurts",
+      "artist": "R.E.M.",
+      "stats": "5–6 · Power score 85.2 · ↓ 3 · Playoffs 35.28% · Caddy Bowl 0.02%",
+      "schedule": "Week 12 vs. Shain · Week 13 vs. T Wood",
+      "body": [
+        "The trouble with telling Potter *“everybody hurts sometimes”* is that he’s got a spreadsheet proving some of us are having a lovely time. His opponents have hung **1,327 points on him, eighth-most in league history through eleven weeks**, while mine average 96.2 and I’m up here trying to hit Whitney Houston’s high note. A few weeks ago Potter looked like a playoff lock, and now Joe Burrow can throw for 300 yards and two touchdowns and all Potter gets out of it is a respectable-looking 38.5-point ass-kicking. I’d put **“Everybody Hurts”** on for him myself, but after five championships he ought to know the other nine guys singing along are trying pretty hard to keep a straight face. Beat Shain and Wood, get a Hud loss, and that 118.2-point cushion gives Potter a strong path back into the field. Lose twice while Ian and Clod reach five and there’s even a tiny chance we’ve spent all season rooting for Potter to miss the playoffs when we could’ve been rooting for him to caddy."
+      ]
+    },
+    {
+      "rank": 8,
+      "team": "Clod",
+      "song": "Achy Breaky Heart",
+      "artist": "Billy Ray Cyrus",
+      "stats": "4–7 · Power score 71.0 · ↑ 1 · Playoffs alive, under 0.01% in the simulation · Caddy Bowl 29.34%",
+      "schedule": "Week 12 vs. Rex · Week 13 vs. Waivers",
+      "body": [
+        "The first time Clod played Wood he scored 58.8, so forgive him for putting on **“Achy Breaky Heart”** and doing a little line dance when Mahomes found Travis Kelce in the end zone. Wood got four points for throwing it, Clod got six and a half for catching it, and somewhere around *“I just don’t think he’d understand,”* Mahomes threw Kelce another one in case Wood needed the math explained again. Kelce finished with six catches for 74 yards and two touchdowns, DJ Moore added eight for 91 and another score, and Clod walked out with **career win 98** and a 34.9-point lead over Ian. With Saquon Barkley expected to play Thanksgiving despite a hamstring issue, one more win puts Shain beyond reach, and matching Ian’s record keeps Clod ahead as long as he protects that points cushion. His playoff path takes wins over Rex and Waivers, two Hud losses, every current 5–6 team staying below seven wins, and Clod winning the six-win tiebreaker. Beat Rex, though, and he gets to play Waivers for win 100 with a chance to break one more heart before the season’s over."
+      ]
+    },
+    {
+      "rank": 9,
+      "team": "Ian",
+      "song": "Friday I’m in Love",
+      "artist": "The Cure",
+      "stats": "4–7 · Power score 69.5 · ↓ 1 · Playoffs alive, under 0.01% in the simulation · Caddy Bowl 70.50%",
+      "schedule": "Week 12 vs. T Wood · Week 13 vs. Trey",
+      "body": [
+        "Friday, Ian sees the matchup and falls in love with his defense. Sunday, Cincinnati gives him two points, and by the time *“Monday you can fall apart”* comes around he’s discovered that those two points **raised his season average**. That’s **“Friday I’m in Love”** for a man whose defenses rank 90th out of 90, whose tight ends rank fourth-worst, and who just wasted 120 rushing yards and two touchdowns from Chuba Hubbard **plus** seven catches for 102 and a score from George Pickens in a 94.8–82.3 loss to Shain. Josh Jacobs was questionable after finger surgery, so even the help Ian’s waiting on can’t properly give him the bird. Win one more game than Clod and Ian passes him outright, or match Clod’s record and outscore him by more than 34.9 across the final two. The playoff miracle needs wins over Wood and me, Hud losing twice, every current 5–6 team staying below seven wins, and Ian winning the resulting points tiebreaker."
+      ]
+    },
+    {
+      "rank": 10,
+      "team": "Shain",
+      "song": "Keep the Faith",
+      "artist": "Bon Jovi",
+      "stats": "2–9 · Power score 62.8 · No change · Playoffs eliminated · Caddy Bowl 99.95%",
+      "schedule": "Week 12 vs. Potter · Week 13 vs. Rex",
+      "body": [
+        "There are 9,995 perfectly good reasons for Shain to start cleaning his golf shoes, but Bon Jovi said *“you gotta keep the faith,”* and apparently that settles it. Ashton Jeanty ran for 79 yards and caught five for 90 more and a touchdown, while Javonte Williams scored once on the ground and once through the air, giving Shain’s two backs more points Sunday than his FLEX has produced since Labor Day. That bought career win 98, and Dalton Kincaid returning to limited practice gives his third-worst TE slot a little room for improvement. Now he needs to beat Potter and Rex, Ian needs to lose to Wood and me, and Clod needs to lose to Rex and Waivers. That leaves all three at 4–9, with Shain needing to erase **24.2 points on Ian and 59.1 on Clod** to send those two to the Caddy Bowl together. Somebody is going to ask Shain what he’s thankful for Thursday, and forty minutes into **“Keep the Faith”** he’ll still be explaining why Rex has to win *this* week but lose *next* week."
+      ]
+    }
+  ],
+  "week11_results": [
+    {
+      "winner": "Galt",
+      "loser": "Potter",
+      "winner_score": 141.4,
+      "loser_score": 102.9,
+      "margin": 38.5,
+      "combined": 244.3,
+      "marks": [
+        "Dunked On"
+      ]
+    },
+    {
+      "winner": "Clod",
+      "loser": "T Wood",
+      "winner_score": 118.0,
+      "loser_score": 99.4,
+      "margin": 18.6,
+      "combined": 217.4,
+      "marks": []
+    },
+    {
+      "winner": "Hud",
+      "loser": "Waivers",
+      "winner_score": 110.0,
+      "loser_score": 96.5,
+      "margin": 13.5,
+      "combined": 206.5,
+      "marks": []
+    },
+    {
+      "winner": "Trey",
+      "loser": "Rex",
+      "winner_score": 108.1,
+      "loser_score": 99.8,
+      "margin": 8.3,
+      "combined": 207.9,
+      "marks": []
+    },
+    {
+      "winner": "Shain",
+      "loser": "Ian",
+      "winner_score": 94.8,
+      "loser_score": 82.3,
+      "margin": 12.5,
+      "combined": 177.1,
+      "marks": [
+        "Pillow Fight"
+      ]
+    }
+  ],
+  "week12_preview": {
+    "matchups": [
+      {
+        "label": "Trey (9–2) vs. Hud (6–5)",
+        "teams": [
+          "Trey",
+          "Hud"
+        ],
+        "stats": [
+          [
+            "Season record",
+            "9-2",
+            "6-5"
+          ],
+          [
+            "Season points for",
+            "1,238.6",
+            "1,196.8"
+          ],
+          [
+            "Season points against",
+            "1,058.6",
+            "1,191.1"
+          ],
+          [
+            "All-time H2H record",
+            "12-15",
+            "15-12"
+          ],
+          [
+            "Regular-season H2H",
+            "12-14",
+            "14-12"
+          ],
+          [
+            "Playoff H2H",
+            "0-1",
+            "1-0"
+          ],
+          [
+            "H2H points scored",
+            "2,904.7",
+            "2,961.9"
+          ],
+          [
+            "H2H PPG",
+            "107.6",
+            "109.7"
+          ],
+          [
+            "H2H PPG (regular season)",
+            "103.2",
+            "104.4"
+          ],
+          [
+            "H2H point differential",
+            "-57.2",
+            "+57.2"
+          ],
+          [
+            "Current H2H win streak",
+            "1",
+            "0"
+          ],
+          [
+            "Longest H2H win streak",
+            "3",
+            "4"
+          ],
+          [
+            "Biggest H2H win margin",
+            "64.0",
+            "58.8"
+          ],
+          [
+            "Buzzer Beaters",
+            "0",
+            "0"
+          ],
+          [
+            "Nail Biters",
+            "1",
+            "1"
+          ],
+          [
+            "Dunked On",
+            "3",
+            "3"
+          ],
+          [
+            "Blow Outs",
+            "3",
+            "3"
+          ],
+          [
+            "Slug Fests",
+            "2",
+            "0"
+          ],
+          [
+            "Pillow Fights",
+            "1",
+            "4"
+          ]
+        ],
+        "text": [
+          "I won the first one **93.7–83.3**. Hud controls his playoff spot by winning out, which means the first time Dak throws a touchdown Thursday I’m going to hear from Potter, Waivers and Galt, three men who have never previously shown much interest in how my Thanksgiving is going."
+        ]
+      },
+      {
+        "label": "Waivers (5–6) vs. Galt (5–6)",
+        "teams": [
+          "Waivers",
+          "Galt"
+        ],
+        "stats": [
+          [
+            "Season record",
+            "5-6",
+            "5-6"
+          ],
+          [
+            "Season points for",
+            "1,262.3",
+            "1,192.6"
+          ],
+          [
+            "Season points against",
+            "1,206.4",
+            "1,213.4"
+          ],
+          [
+            "All-time H2H record",
+            "12-11",
+            "11-12"
+          ],
+          [
+            "Regular-season H2H",
+            "11-11",
+            "11-11"
+          ],
+          [
+            "Playoff H2H",
+            "1-0",
+            "0-1"
+          ],
+          [
+            "H2H points scored",
+            "2,454.6",
+            "2,608.7"
+          ],
+          [
+            "H2H PPG",
+            "106.7",
+            "113.4"
+          ],
+          [
+            "H2H PPG (regular season)",
+            "102.2",
+            "109.3"
+          ],
+          [
+            "H2H point differential",
+            "-154.1",
+            "+154.1"
+          ],
+          [
+            "Current H2H win streak",
+            "1",
+            "0"
+          ],
+          [
+            "Longest H2H win streak",
+            "2",
+            "2"
+          ],
+          [
+            "Biggest H2H win margin",
+            "33.5",
+            "71.0"
+          ],
+          [
+            "Buzzer Beaters",
+            "0",
+            "1"
+          ],
+          [
+            "Nail Biters",
+            "2",
+            "0"
+          ],
+          [
+            "Dunked On",
+            "5",
+            "5"
+          ],
+          [
+            "Blow Outs",
+            "0",
+            "3"
+          ],
+          [
+            "Slug Fests",
+            "1",
+            "0"
+          ],
+          [
+            "Pillow Fights",
+            "3",
+            "0"
+          ]
+        ],
+        "text": [
+          "Waivers leads the all-time series **12–11**. Galt can even it up and head straight into another playoff fight with Hud, while the loser needs Hud to drop both remaining games just to catch him."
+        ]
+      },
+      {
+        "label": "Ian (4–7) vs. T Wood (7–4)",
+        "teams": [
+          "Ian",
+          "T Wood"
+        ],
+        "stats": [
+          [
+            "Season record",
+            "4-7",
+            "7-4"
+          ],
+          [
+            "Season points for",
+            "1,030.2",
+            "1,291.7"
+          ],
+          [
+            "Season points against",
+            "1,200.3",
+            "1,101.9"
+          ],
+          [
+            "All-time H2H record",
+            "11-9",
+            "9-11"
+          ],
+          [
+            "Regular-season H2H",
+            "10-9",
+            "9-10"
+          ],
+          [
+            "Playoff H2H",
+            "1-0",
+            "0-1"
+          ],
+          [
+            "H2H points scored",
+            "2,110.7",
+            "2,198.7"
+          ],
+          [
+            "H2H PPG",
+            "105.5",
+            "109.9"
+          ],
+          [
+            "H2H PPG (regular season)",
+            "99.8",
+            "106.0"
+          ],
+          [
+            "H2H point differential",
+            "-88.0",
+            "+88.0"
+          ],
+          [
+            "Current H2H win streak",
+            "0",
+            "1"
+          ],
+          [
+            "Longest H2H win streak",
+            "2",
+            "2"
+          ],
+          [
+            "Biggest H2H win margin",
+            "53.2",
+            "82.2"
+          ],
+          [
+            "Buzzer Beaters",
+            "0",
+            "0"
+          ],
+          [
+            "Nail Biters",
+            "1",
+            "1"
+          ],
+          [
+            "Dunked On",
+            "4",
+            "4"
+          ],
+          [
+            "Blow Outs",
+            "1",
+            "3"
+          ],
+          [
+            "Slug Fests",
+            "0",
+            "0"
+          ],
+          [
+            "Pillow Fights",
+            "1",
+            "3"
+          ]
+        ],
+        "text": [
+          "Wood escaped **97.4–95** in their first meeting. Three more points from Ian’s defense would’ve flipped it, which between the 89th- and 90th-ranked D/ST seasons on record apparently qualifies as asking somebody to be the ’85 Bears."
+        ]
+      },
+      {
+        "label": "Rex (8–3) vs. Clod (4–7)",
+        "teams": [
+          "Rex",
+          "Clod"
+        ],
+        "stats": [
+          [
+            "Season record",
+            "8-3",
+            "4-7"
+          ],
+          [
+            "Season points for",
+            "1,402.4",
+            "1,065.1"
+          ],
+          [
+            "Season points against",
+            "1,180.6",
+            "1,289.6"
+          ],
+          [
+            "All-time H2H record",
+            "10-13",
+            "13-10"
+          ],
+          [
+            "Regular-season H2H",
+            "7-12",
+            "12-7"
+          ],
+          [
+            "Playoff H2H",
+            "3-1",
+            "1-3"
+          ],
+          [
+            "H2H points scored",
+            "3,011.4",
+            "2,805.0"
+          ],
+          [
+            "H2H PPG",
+            "130.9",
+            "122.0"
+          ],
+          [
+            "H2H PPG (regular season)",
+            "106.2",
+            "109.1"
+          ],
+          [
+            "H2H point differential",
+            "+206.4",
+            "-206.4"
+          ],
+          [
+            "Current H2H win streak",
+            "1",
+            "0"
+          ],
+          [
+            "Longest H2H win streak",
+            "1",
+            "5"
+          ],
+          [
+            "Biggest H2H win margin",
+            "69.1",
+            "57.7"
+          ],
+          [
+            "Buzzer Beaters",
+            "0",
+            "0"
+          ],
+          [
+            "Nail Biters",
+            "1",
+            "2"
+          ],
+          [
+            "Dunked On",
+            "2",
+            "4"
+          ],
+          [
+            "Blow Outs",
+            "3",
+            "3"
+          ],
+          [
+            "Slug Fests",
+            "0",
+            "0"
+          ],
+          [
+            "Pillow Fights",
+            "2",
+            "0"
+          ]
+        ],
+        "text": [
+          "Rex won the first meeting **156.1–93.6**. Clod already avenged one September ass-kicking, and another would send him into the finale playing for win 100 while giving me a chance to clinch first."
+        ]
+      },
+      {
+        "label": "Potter (5–6) vs. Shain (2–9)",
+        "teams": [
+          "Potter",
+          "Shain"
+        ],
+        "stats": [
+          [
+            "Season record",
+            "5-6",
+            "2-9"
+          ],
+          [
+            "Season points for",
+            "1,315.0",
+            "1,006.0"
+          ],
+          [
+            "Season points against",
+            "1,327.0",
+            "1,231.8"
+          ],
+          [
+            "All-time H2H record",
+            "14-11",
+            "11-14"
+          ],
+          [
+            "Regular-season H2H",
+            "12-11",
+            "11-12"
+          ],
+          [
+            "Playoff H2H",
+            "2-0",
+            "0-2"
+          ],
+          [
+            "H2H points scored",
+            "3,040.3",
+            "2,940.6"
+          ],
+          [
+            "H2H PPG",
+            "121.6",
+            "117.6"
+          ],
+          [
+            "H2H PPG (regular season)",
+            "111.7",
+            "110.6"
+          ],
+          [
+            "H2H point differential",
+            "+99.7",
+            "-99.7"
+          ],
+          [
+            "Current H2H win streak",
+            "1",
+            "0"
+          ],
+          [
+            "Longest H2H win streak",
+            "4",
+            "5"
+          ],
+          [
+            "Biggest H2H win margin",
+            "53.6",
+            "77.1"
+          ],
+          [
+            "Buzzer Beaters",
+            "1",
+            "0"
+          ],
+          [
+            "Nail Biters",
+            "0",
+            "1"
+          ],
+          [
+            "Dunked On",
+            "5",
+            "4"
+          ],
+          [
+            "Blow Outs",
+            "2",
+            "2"
+          ],
+          [
+            "Slug Fests",
+            "2",
+            "0"
+          ],
+          [
+            "Pillow Fights",
+            "1",
+            "1"
+          ]
+        ],
+        "text": [
+          "Potter won the opener **135.3–96.5**. A sweep sends Shain to the Caddy Bowl. A split sends a five-time champion to 5–7, at which point I think we can safely give Shain permission to pick the music."
+        ]
+      }
+    ]
+  },
+  "marks_note": "Marks are credited to the winning side as listed in WriteupStats. Definitions: Buzzer Beater = margin under 1; Nail Biter = over 1 and under 5; Dunked On = over 20; Blow Out = over 40; Slug Fest = combined over 250; Pillow Fight = combined under 180.",
+  "methodology_note": "Rankings follow the notebook’s Weekly Power Rankings tab. Odds come from 10,000 simulations of the remaining schedule using season scoring averages, variability and earlier bye adjustments. Neither Clod nor Ian made the playoffs in that run, though both have a mathematical path. Injury notes reflect the November 24 reports and aren’t incorporated into the percentages."
+}</script>
+  <script>
+  (function(){
+    const D = JSON.parse(document.getElementById("writeup-data").textContent);
+    const esc = s => String(s ?? "").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    // minimal inline markdown: **bold**, *italic* (applied after escaping)
+    const md = s => esc(s).replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/\*(.+?)\*/g,"<em>$1</em>");
+    const paras = a => (a||[]).map(t=>`<p>${md(t)}</p>`).join("");
+    const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+
+    // Manager color schemes (from the WriteupStats tab) and headshot files (headshots/<slug>.png)
+    const MGR = {
+      "Ian":    {slug:"ian-baro",        bg:"#0000FF", fg:"#FFFFFF", ini:"IB"},
+      "T Wood": {slug:"t-wood",          bg:"#38761D", fg:"#FF9900", ini:"TW"},
+      "Trey":   {slug:"trey-wilder",     bg:"#CEB888", fg:"#990000", ini:"TR"},
+      "Hud":    {slug:"josh-hudson",     bg:"#00B0F0", fg:"#FFFFFF", ini:"JH"},
+      "Waivers":{slug:"michael-waivers", bg:"#00FFFF", fg:"#9F80FF", ini:"MW"},
+      "Galt":   {slug:"lee-galt",        bg:"#980000", fg:"#CCCCCC", ini:"LG"},
+      "Rex":    {slug:"taylor-hardee",   bg:"#FFFF00", fg:"#FF0000", ini:"TH"},
+      "Clod":   {slug:"cody-clodfelter", bg:"#674EA7", fg:"#FFFF00", ini:"CC"},
+      "Potter": {slug:"mark-potter",     bg:"#0F45A8", fg:"#E6B8AF", ini:"MP"},
+      "Shain":  {slug:"shain-collins",   bg:"#FF0000", fg:"#FFFFFF", ini:"SC"}
+    };
+    const sty = n => MGR[n] ? `--bg:${MGR[n].bg};--fg:${MGR[n].fg}` : "";
+    // headshot circle; if headshots/<slug>.png is missing the image removes itself and the initials show
+    const av = (n,px) => { const m=MGR[n]; if(!m) return ""; return `<span class="av" style="${sty(n)};width:${px}px;height:${px}px;font-size:${Math.round(px*.34)}px"><span>${m.ini}</span><img src="headshots/${m.slug}.png" alt="${esc(n)}" onload="this.parentNode.classList.add(\'ok\')" onerror="this.remove()"></span>`; };
+    const pill = n => `<span class="pill" style="${sty(n)}">${av(n,22)}${esc(n)}</span>`;
+
+    function hero(){
+      return D.header_image
+        ? `<div class="hero"><img src="${esc(D.header_image)}" alt=""></div>`
+        : `<div class="hero" data-placeholder="header-image">[ HEADER IMAGE PLACEHOLDER — Trey uploads this, then set header_image ]</div>`;
+    }
+    function hermania(){
+      const h = D.hermania;
+      const th = h.table_head.map((c,i)=>`<th class="${i===1||i===4?"num":""}">${esc(c)}</th>`).join("");
+      const tr = h.table_rows.map(r=>`<tr>${r.map((c,i)=>`<td class="${i===1||i===4?"num":""}">${md(c)}</td>`).join("")}</tr>`).join("");
+      return `<div class="quote">${esc(h.quote)}</div>${paras(h.before)}
+        <div class="tableWrap"><table id="hermaniaTable"><thead><tr>${th}</tr></thead><tbody>${tr}</tbody></table></div>${paras(h.after)}`;
+    }
+    function rankings(){
+      return D.power_rankings.map(r=>`<article class="card mgr" style="${sty(r.team)}" data-rank="${r.rank}">
+          <div class="rankHead">${av(r.team,64)}<div><h3><span class="rankNum">${r.rank}.</span> ${esc(r.team)} — “${esc(r.song)}”</h3>
+          <div class="song">${esc(r.artist)}</div></div></div>
+          <div class="chips">${r.stats.split(" · ").map(s=>`<span class="chip">${esc(s)}</span>`).join("")}</div>
+          <div class="sched">${esc(r.schedule)}</div>
+          ${paras(r.body)}</article>`).join("");
+    }
+    function results(){
+      const rows = D.week11_results.map(g=>`<tr><td>${pill(g.winner)}</td><td>${pill(g.loser)}</td><td>${g.winner_score.toFixed(1)}–${g.loser_score.toFixed(1)}</td><td class="num">${g.margin.toFixed(1)}</td><td class="marks">${g.marks.length?g.marks.map(m=>`<span class="m">${esc(m)}</span>`).join(""):"—"}</td></tr>`).join("");
+      return `<div class="tableWrap"><table id="resultsTable"><thead><tr><th>Winner</th><th>Loser</th><th>Score</th><th class="num">Margin</th><th>Marks</th></tr></thead><tbody>${rows}</tbody></table></div>`;
+    }
+    function preview(){
+      return D.week12_preview.matchups.map(m=>{
+        const body=m.stats.map(r=>`<tr><td>${esc(r[0])}</td><td class="num">${esc(r[1])}</td><td class="num">${esc(r[2])}</td></tr>`).join("");
+        return `<article class="card previewCard"><h3>${esc(m.label)}</h3><div style="margin:8px 0 12px;display:flex;gap:8px;flex-wrap:wrap">${pill(m.teams[0])}${pill(m.teams[1])}</div>
+          <div class="tableWrap"><table class="stat"><thead><tr><th></th><th class="num mg" style="${sty(m.teams[0])}">${av(m.teams[0],28)}${esc(m.teams[0])}</th><th class="num mg" style="${sty(m.teams[1])}">${av(m.teams[1],28)}${esc(m.teams[1])}</th></tr></thead><tbody>${body}</tbody></table></div>
+          ${paras(m.text)}</article>`;}).join("");
+    }
+    document.getElementById("app").innerHTML = `
+      <header><div class="fine">${esc(D.subtitle)}</div><h1>${esc(D.title)}</h1></header>
+      ${hero()}
+      <div class="prose">${paras(D.intro)}</div>
+      <h2 class="section" id="hermania">${esc(D.hermania.heading)}</h2>${hermania()}
+      <h2 class="section" id="power-rankings">Week 11 Power Rankings</h2>${rankings()}
+      <h2 class="section" id="week-11-recap">Week 11 Recap</h2>
+      <h3>Week 11 Results</h3>${results()}
+      <h2 class="section" id="week-12-preview">Week 12 Preview</h2>${preview()}
+      <p class="fine">${md(D.marks_note)}</p>
+      <p class="fine">${md(D.methodology_note)}</p>`;
+
+    const root=document.documentElement; let saved=null;
+    try{ for(const k of Object.keys(localStorage)){ if(/theme/i.test(k)){ const v=localStorage.getItem(k); if(v==="light"||v==="dark"){saved=v;break;} } } }catch(e){}
+    root.setAttribute("data-theme", saved || (matchMedia("(prefers-color-scheme: light)").matches?"light":"dark"));
+    document.getElementById("themeBtn").onclick=()=>root.setAttribute("data-theme",root.getAttribute("data-theme")==="dark"?"light":"dark");
+  })();
+  </script>
+</body>
+</html>
