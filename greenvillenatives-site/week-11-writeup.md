@@ -16,6 +16,8 @@ Roll the tape from Kansas City. Mahomes drops back, finds Kelce, touchdown. Wood
 
 Two regular-season games left. Rex and I are in, Wood needs one more win, and Hud holds the spot three guys at 5–6 want. Meanwhile, Shain beat Ian and earned the right to explain six separate football games to his family over Thanksgiving dinner. Before we get to the mixtape, Hermania would like a word with Ian’s defensive coordinator.
 
+Let me be the first to wish you a happy Thanksgiving. Safe travels to all who are traveling this weekend.
+
 ---
 
 # Hermania Bot opens the record book
