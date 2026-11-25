@@ -1,0 +1,230 @@
+{
+  "season": 2026,
+  "week": 11,
+  "title": "9–2, So We’re Doing ’92",
+  "subtitle": "Greenville Natives · 2026 Season · Week 11 Recap & Week 12 Preview",
+  "header_image": null,
+  "branding": "Greenville Natives · 2026 Season",
+  "intro": [
+    "I beat Rex, Clod beat Wood, and I woke up Monday 9–2 and back at number one. So this week we’re doing songs from 1992. Is that a little self-serving? Boys, I built an entire website so you could read what I think about ten fantasy football teams, one of which is mine. I thought we settled that question years ago.",
+    "Roll the tape from Kansas City. Mahomes drops back, finds Kelce, touchdown. Wood jumps up. Clod jumps up. Wood remembers whose tight end that is and sits his ass back down. Now over to Dallas, where Dak finds CeeDee and Waivers gets about half a second to enjoy himself before Hud reminds him how passing touchdowns work. Two games, four managers, and the only guy who got to celebrate a touchdown in peace was Galt, who got three from Jonah Coleman and dedicated every damn one of them to Potter.",
+    "Two regular-season games left. Rex and I are in, Wood needs one more win, and Hud holds the spot three guys at 5–6 want. Meanwhile, Shain beat Ian and earned the right to explain six separate football games to his family over Thanksgiving dinner. Before we get to the mixtape, Hermania would like a word with Ian’s defensive coordinator."
+  ],
+  "hermania": {
+    "heading": "Hermania Bot opens the record book",
+    "quote": "Mmmmmmmm I think… Ian, Galt got 16 points from the Bears on Sunday. You’ve gotten 21 from your defenses since September.",
+    "before": [
+      "Across **90 manager-seasons from 2018 through 2026**, six current managers account for eleven positional totals among the five best or five worst. Everybody gets the same eleven games and the same corrected RB, WR and FLEX assignments."
+    ],
+    "table_head": [
+      "Historical top five",
+      "Points",
+      "Rank",
+      "Historical bottom five",
+      "Points",
+      "Rank"
+    ],
+    "table_rows": [
+      [
+        "Galt · K",
+        "118.0",
+        "2nd-best",
+        "Ian · D/ST",
+        "21.0",
+        "Worst"
+      ],
+      [
+        "T Wood · WR1",
+        "262.6",
+        "3rd-best",
+        "T Wood · D/ST",
+        "38.0",
+        "2nd-worst"
+      ],
+      [
+        "T Wood · RB1",
+        "285.8",
+        "4th-best",
+        "Shain · TE",
+        "53.4",
+        "3rd-worst"
+      ],
+      [
+        "Rex · TE",
+        "158.6",
+        "4th-best",
+        "Ian · TE",
+        "54.0",
+        "4th-worst"
+      ],
+      [
+        "Trey · D/ST",
+        "129.0",
+        "4th-best",
+        "Shain · FLEX",
+        "43.4",
+        "4th-worst"
+      ],
+      [
+        "",
+        "",
+        "",
+        "Galt · FLEX",
+        "44.8",
+        "5th-worst"
+      ]
+    ],
+    "after": [
+      "Clod still owns the RB1 record with **330.0 in 2019**, followed by 2025 Ian (300.4), 2018 me (292.6), this year’s Wood (285.8), and 2019 me (285.4). Wood spent eleven weeks passing one of my teams by four-tenths, then lost to the guy at the top of the list. Appreciate you handling that, Clod."
+    ]
+  },
+  "power_rankings": [
+    {
+      "rank": 1,
+      "team": "Trey",
+      "song": "I Will Always Love You",
+      "artist": "Whitney Houston",
+      "stats": "9–2 · Power score 98.7 · ↑ 2 · Playoffs clinched · Caddy Bowl eliminated",
+      "schedule": "Week 12 vs. Hud · Week 13 vs. Ian",
+      "body": [
+        "Emmett Johnson, if Kenneth Walker coming back means our time together is almost up, there’s something I’d like to say before you go: *“I will always love you.”* The man ran for 105 yards and a touchdown, caught four passes for another 38, and carried me past Rex **108.1–99.8** while my two starting receivers combined for fewer points than James Cook got by himself. Walker’s back at practice, Bhayshul Tuten aggravated his ankle, and suddenly I understand why Whitney took so damn long saying goodbye. Beat Hud and Ian and the one seed is mine, or I can clinch this week with a win and a Clod upset over Rex. For the record, Clod, that earns you a beer."
+      ]
+    },
+    {
+      "rank": 2,
+      "team": "Rex",
+      "song": "My Lovin’ (You’re Never Gonna Get It)",
+      "artist": "En Vogue",
+      "stats": "8–3 · Power score 98.2 · No change · Playoffs clinched · Caddy Bowl eliminated",
+      "schedule": "Week 12 vs. Clod · Week 13 vs. Shain",
+      "body": [
+        "Rex has scored **163.8 more points than me** and would like to know when I plan on handing over first place. I put on **“My Lovin’,”** skipped to *“never gonna get it,”* and let En Vogue handle commissioner correspondence. He had me right there Sunday, but Trevor Lawrence threw for 301 yards with one touchdown and two interceptions against the Giants, leaving Rex 8.3 short and waiting on somebody else to do him a favor. Drake Maye’s ankle is expected to cost him at least six weeks, and Brock Bowers missed Sunday, although I’ll start feeling sorry for Rex at tight end when he gives back one of the three top-four TE seasons he owns. The defending champ still leads the league in scoring despite putting up 172.5 in Week 9 and **157.4 combined** in the two weeks since. Beat Clod and Shain, get one loss from me, and Rex has an excellent chance of sending that song right back to my ass."
+      ]
+    },
+    {
+      "rank": 3,
+      "team": "T Wood",
+      "song": "Jump Around",
+      "artist": "House of Pain",
+      "stats": "7–4 · Power score 94.8 · ↓ 2 · Playoffs 95.43% · Caddy Bowl eliminated",
+      "schedule": "Week 12 vs. Ian · Week 13 vs. Potter",
+      "body": [
+        "*“Jump up, jump up and get down”* turned out to be fairly precise instructions for watching Mahomes throw touchdowns to Clod’s players. By the second one Wood had taken most of the **“Jump Around”** out of his celebration, and by the end he’d gotten 324 passing yards and three scores out of his quarterback in a game he lost by 18.6. Jahmyr Gibbs even ran for 98 yards and two touchdowns, but Emeka Egbuka and Luther Burden combined for 5.1 fantasy points, which is how a man with historic RB1 and WR1 production loses to the guy he held to 58.8 in September. One win clinches, starting with an Ian team Wood escaped by 2.4 the first time. Lose that one and Potter gets him in Week 13 with a playoff spot potentially on the line and a 23.3-point head start if they finish tied."
+      ]
+    },
+    {
+      "rank": 4,
+      "team": "Hud",
+      "song": "It Was a Good Day",
+      "artist": "Ice Cube",
+      "stats": "6–5 · Power score 92.9 · ↑ 2 · Playoffs 34.98% · Caddy Bowl eliminated",
+      "schedule": "Week 12 vs. Trey · Week 13 vs. Galt",
+      "body": [
+        "Waivers got 11 catches, 132 yards and a touchdown from CeeDee Lamb, and Hud got to enjoy the Cowboys game more than he did. Dak Prescott threw for 325 yards and four touchdowns, then ran one in himself so Waivers could see what it looked like when Hud kept the whole damn thing. Mike Evans caught six for 109 and a score, Ja’Marr Chase and Jaylen Warren could’ve split a cab home at halftime, and Hud still picked up career win 101, swept Waivers and took sole possession of fourth. For a man who was 3–5 three Sundays ago, *“today was a good day”* is putting it mildly.",
+        "Beat me and Galt and Hud’s in at 8–5, no favors required. Split and he’d appreciate Potter and Waivers losing at least once apiece, because **118.2** is a hell of a lot of points to owe Potter if they finish with the same record."
+      ]
+    },
+    {
+      "rank": 5,
+      "team": "Waivers",
+      "song": "End of the Road",
+      "artist": "Boyz II Men",
+      "stats": "5–6 · Power score 90.3 · No change · Playoffs 22.72% · Caddy Bowl 0.12%",
+      "schedule": "Week 12 vs. Galt · Week 13 vs. Clod",
+      "body": [
+        "This is where the music drops out of **“End of the Road”** and Waivers gets the deep-voiced talking part to explain why he *“still can’t let go”* of a fantasy football game from September. He scored 127.6 that Sunday and lost to Hud by three, then spent a month digging himself out of a 1–5 hole just to find the same bastard waiting at the top. This time Josh Allen gave him 12 points, Cam Little kicked in 13, and somewhere during Dak’s fifth touchdown Waivers probably would’ve taken the September loss back. Beat Galt and Clod, get at least one loss apiece from Hud and Potter, and Waivers has a strong route to fourth with 65.5 more points than Hud. Lose both while Ian reaches five wins too, and a bad tiebreaker could put Waivers in the Caddy Bowl. Hell of a range of outcomes for that Clod game, from playing for a playoff spot to asking whether the bag has a shoulder strap."
+      ]
+    },
+    {
+      "rank": 6,
+      "team": "Galt",
+      "song": "Nuthin’ but a ‘G’ Thang",
+      "artist": "Dr. Dre featuring Snoop Dogg",
+      "stats": "5–6 · Power score 90.2 · ↑ 1 · Playoffs 11.59% · Caddy Bowl 0.07%",
+      "schedule": "Week 12 vs. Waivers · Week 13 vs. Hud",
+      "body": [
+        "*“One, two, three and to the four”* — easy there, Snoop, Jonah Coleman stopped at three, and by then Potter had seen plenty. Coleman ran for 111 yards and three touchdowns, Tyler Bass kicked in 17, and the Bears defense added 16 as Galt followed 138.3 against me with a season-high **141.4 against Potter**. That’s career wins 100 and 101 at our expense, so yes, Lee, for two Sundays now it’s been **nuthin’ but a G thang**. My favorite part is that his kickers have outscored his FLEX **118.0–44.8** and he still lined up Potter and me back-to-back and beat us like he knew something about football.",
+        "Now Galt gets Waivers and Hud in person: sweep them, get one Potter loss and a win from me over Hud, and he finishes 7–6 ahead of all three. Lose both while Ian and Clod reach five wins and the wrong points tiebreaker could put last year’s caddy back on the bag, so I’d leave the clubs in the truck for another couple weeks."
+      ]
+    },
+    {
+      "rank": 7,
+      "team": "Potter",
+      "song": "Everybody Hurts",
+      "artist": "R.E.M.",
+      "stats": "5–6 · Power score 85.2 · ↓ 3 · Playoffs 35.28% · Caddy Bowl 0.02%",
+      "schedule": "Week 12 vs. Shain · Week 13 vs. T Wood",
+      "body": [
+        "The trouble with telling Potter *“everybody hurts sometimes”* is that he’s got a spreadsheet proving some of us are having a lovely time. His opponents have hung **1,327 points on him, eighth-most in league history through eleven weeks**, while mine average 96.2 and I’m up here trying to hit Whitney Houston’s high note. A few weeks ago Potter looked like a playoff lock, and now Joe Burrow can throw for 300 yards and two touchdowns and all Potter gets out of it is a respectable-looking 38.5-point ass-kicking. I’d put **“Everybody Hurts”** on for him myself, but after five championships he ought to know the other nine guys singing along are trying pretty hard to keep a straight face. Beat Shain and Wood, get a Hud loss, and that 118.2-point cushion gives Potter a strong path back into the field. Lose twice while Ian and Clod reach five and there’s even a tiny chance we’ve spent all season rooting for Potter to miss the playoffs when we could’ve been rooting for him to caddy."
+      ]
+    },
+    {
+      "rank": 8,
+      "team": "Clod",
+      "song": "Achy Breaky Heart",
+      "artist": "Billy Ray Cyrus",
+      "stats": "4–7 · Power score 71.0 · ↑ 1 · Playoffs alive, under 0.01% in the simulation · Caddy Bowl 29.34%",
+      "schedule": "Week 12 vs. Rex · Week 13 vs. Waivers",
+      "body": [
+        "The first time Clod played Wood he scored 58.8, so forgive him for putting on **“Achy Breaky Heart”** and doing a little line dance when Mahomes found Travis Kelce in the end zone. Wood got four points for throwing it, Clod got six and a half for catching it, and somewhere around *“I just don’t think he’d understand,”* Mahomes threw Kelce another one in case Wood needed the math explained again. Kelce finished with six catches for 74 yards and two touchdowns, DJ Moore added eight for 91 and another score, and Clod walked out with **career win 98** and a 34.9-point lead over Ian. With Saquon Barkley expected to play Thanksgiving despite a hamstring issue, one more win puts Shain beyond reach, and matching Ian’s record keeps Clod ahead as long as he protects that points cushion. His playoff path takes wins over Rex and Waivers, two Hud losses, every current 5–6 team staying below seven wins, and Clod winning the six-win tiebreaker. Beat Rex, though, and he gets to play Waivers for win 100 with a chance to break one more heart before the season’s over."
+      ]
+    },
+    {
+      "rank": 9,
+      "team": "Ian",
+      "song": "Friday I’m in Love",
+      "artist": "The Cure",
+      "stats": "4–7 · Power score 69.5 · ↓ 1 · Playoffs alive, under 0.01% in the simulation · Caddy Bowl 70.50%",
+      "schedule": "Week 12 vs. T Wood · Week 13 vs. Trey",
+      "body": [
+        "Friday, Ian sees the matchup and falls in love with his defense. Sunday, Cincinnati gives him two points, and by the time *“Monday you can fall apart”* comes around he’s discovered that those two points **raised his season average**. That’s **“Friday I’m in Love”** for a man whose defenses rank 90th out of 90, whose tight ends rank fourth-worst, and who just wasted 120 rushing yards and two touchdowns from Chuba Hubbard **plus** seven catches for 102 and a score from George Pickens in a 94.8–82.3 loss to Shain. Josh Jacobs was questionable after finger surgery, so even the help Ian’s waiting on can’t properly give him the bird. Win one more game than Clod and Ian passes him outright, or match Clod’s record and outscore him by more than 34.9 across the final two. The playoff miracle needs wins over Wood and me, Hud losing twice, every current 5–6 team staying below seven wins, and Ian winning the resulting points tiebreaker."
+      ]
+    },
+    {
+      "rank": 10,
+      "team": "Shain",
+      "song": "Keep the Faith",
+      "artist": "Bon Jovi",
+      "stats": "2–9 · Power score 62.8 · No change · Playoffs eliminated · Caddy Bowl 99.95%",
+      "schedule": "Week 12 vs. Potter · Week 13 vs. Rex",
+      "body": [
+        "There are 9,995 perfectly good reasons for Shain to start cleaning his golf shoes, but Bon Jovi said *“you gotta keep the faith,”* and apparently that settles it. Ashton Jeanty ran for 79 yards and caught five for 90 more and a touchdown, while Javonte Williams scored once on the ground and once through the air, giving Shain’s two backs more points Sunday than his FLEX has produced since Labor Day. That bought career win 98, and Dalton Kincaid returning to limited practice gives his third-worst TE slot a little room for improvement. Now he needs to beat Potter and Rex, Ian needs to lose to Wood and me, and Clod needs to lose to Rex and Waivers. That leaves all three at 4–9, with Shain needing to erase **24.2 points on Ian and 59.1 on Clod** to send those two to the Caddy Bowl together. Somebody is going to ask Shain what he’s thankful for Thursday, and forty minutes into **“Keep the Faith”** he’ll still be explaining why Rex has to win *this* week but lose *next* week."
+      ]
+    }
+  ],
+  "week12_preview": {
+    "matchups": [
+      {
+        "label": "Trey (9–2) vs. Hud (6–5)",
+        "text": [
+          "I won the first one **93.7–83.3**. Hud controls his playoff spot by winning out, which means the first time Dak throws a touchdown Thursday I’m going to hear from Potter, Waivers and Galt, three men who have never previously shown much interest in how my Thanksgiving is going."
+        ]
+      },
+      {
+        "label": "Waivers (5–6) vs. Galt (5–6)",
+        "text": [
+          "Waivers leads the all-time series **12–11**. Galt can even it up and head straight into another playoff fight with Hud, while the loser needs Hud to drop both remaining games just to catch him."
+        ]
+      },
+      {
+        "label": "Ian (4–7) vs. T Wood (7–4)",
+        "text": [
+          "Wood escaped **97.4–95** in their first meeting. Three more points from Ian’s defense would’ve flipped it, which between the 89th- and 90th-ranked D/ST seasons on record apparently qualifies as asking somebody to be the ’85 Bears."
+        ]
+      },
+      {
+        "label": "Rex (8–3) vs. Clod (4–7)",
+        "text": [
+          "Rex won the first meeting **156.1–93.6**. Clod already avenged one September ass-kicking, and another would send him into the finale playing for win 100 while giving me a chance to clinch first."
+        ]
+      },
+      {
+        "label": "Potter (5–6) vs. Shain (2–9)",
+        "text": [
+          "Potter won the opener **135.3–96.5**. A sweep sends Shain to the Caddy Bowl. A split sends a five-time champion to 5–7, at which point I think we can safely give Shain permission to pick the music."
+        ]
+      }
+    ]
+  },
+  "methodology_note": "Rankings follow the notebook’s Weekly Power Rankings tab. Odds come from 10,000 simulations of the remaining schedule using season scoring averages, variability and earlier bye adjustments. Neither Clod nor Ian made the playoffs in that run, though both have a mathematical path. Injury notes reflect the November 24 reports and aren’t incorporated into the percentages."
+}
