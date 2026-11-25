@@ -20,9 +20,7 @@ Two regular-season games left. Rex and I are in, Wood needs one more win, and Hu
 
 # Hermania Bot opens the record book
 
-**Mmmmmmmm I think… Ian, Galt got 16 points from the Bears on Sunday. You’ve gotten 21 from your defenses since September.**
-
-Across **90 manager-seasons from 2018 through 2026**, six current managers account for eleven positional totals among the five best or five worst. Everybody gets the same eleven games and the same corrected RB, WR and FLEX assignments.
+**A note on the grading: your RB1/RB2, WR1/WR2 and FLEX are graded by their weekly score, not by the lineup slot they were started in.**
 
 | Historical top five | Points | Rank | Historical bottom five | Points | Rank |
 |---|---:|---|---|---:|---|
