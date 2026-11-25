@@ -49,6 +49,19 @@
     .fine{color:var(--muted);font-size:13px}
     footer{padding:30px 0 50px;color:var(--muted);font-size:13px}
     .song{color:var(--muted);font-style:italic;margin:2px 0 10px}
+    .av{position:relative;display:inline-flex;align-items:center;justify-content:center;flex:none;border-radius:50%;overflow:hidden;font-weight:800;letter-spacing:.5px;background:var(--bg,#444);color:var(--fg,#fff);box-shadow:0 0 0 2px #0b1220,0 0 0 4px var(--fg,#fff);vertical-align:middle}
+    .av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+    .rankHead{display:flex;align-items:center;gap:14px;margin:-18px -18px 14px;padding:14px 18px;border-radius:var(--radius) var(--radius) 0 0;background:var(--bg);color:var(--fg)}
+    .rankHead h3{color:var(--fg)}
+    .rankHead .rankNum{color:var(--fg);opacity:.85}
+    .rankHead .song{color:var(--fg);opacity:.85;margin:2px 0 0}
+    .card.mgr{border-color:var(--bg)}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:2px 10px 2px 3px;border-radius:999px;background:var(--bg);color:var(--fg);font-weight:700;font-size:13px}
+    .stat th.mg{background:var(--bg);color:var(--fg)}
+    .stat th .av{margin-right:8px;box-shadow:0 0 0 2px var(--fg)}
+    .stat thead th.mg:first-child{border-radius:0}
+    .sched{color:var(--muted);font-size:14px;margin:0 0 12px;font-style:italic}
+    .quote{border-left:3px solid var(--accent);padding:4px 14px;margin:0 0 14px;font-weight:600}
     .sched{color:var(--muted);font-size:14px;margin:0 0 12px;font-style:italic}
     .quote{border-left:3px solid var(--accent);padding:4px 14px;margin:0 0 14px;font-weight:600}
     .stat th:first-child,.stat td:first-child{width:50%}
@@ -860,6 +873,24 @@
     const paras = a => (a||[]).map(t=>`<p>${md(t)}</p>`).join("");
     const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 
+    // Manager color schemes (from the WriteupStats tab) and headshot files (headshots/<slug>.png)
+    const MGR = {
+      "Ian":    {slug:"ian-baro",        bg:"#0000FF", fg:"#FFFFFF", ini:"IB"},
+      "T Wood": {slug:"t-wood",          bg:"#38761D", fg:"#FF9900", ini:"TW"},
+      "Trey":   {slug:"trey-wilder",     bg:"#CEB888", fg:"#990000", ini:"TR"},
+      "Hud":    {slug:"josh-hudson",     bg:"#00B0F0", fg:"#FFFFFF", ini:"JH"},
+      "Waivers":{slug:"michael-waivers", bg:"#00FFFF", fg:"#9F80FF", ini:"MW"},
+      "Galt":   {slug:"lee-galt",        bg:"#980000", fg:"#CCCCCC", ini:"LG"},
+      "Rex":    {slug:"taylor-hardee",   bg:"#FFFF00", fg:"#FF0000", ini:"TH"},
+      "Clod":   {slug:"cody-clodfelter", bg:"#674EA7", fg:"#FFFF00", ini:"CC"},
+      "Potter": {slug:"mark-potter",     bg:"#0F45A8", fg:"#E6B8AF", ini:"MP"},
+      "Shain":  {slug:"shain-collins",   bg:"#FF0000", fg:"#FFFFFF", ini:"SC"}
+    };
+    const sty = n => MGR[n] ? `--bg:${MGR[n].bg};--fg:${MGR[n].fg}` : "";
+    // headshot circle; if headshots/<slug>.png is missing the image removes itself and the initials show
+    const av = (n,px) => { const m=MGR[n]; if(!m) return ""; return `<span class="av" style="${sty(n)};width:${px}px;height:${px}px;font-size:${Math.round(px*.34)}px"><span>${m.ini}</span><img src="headshots/${m.slug}.png" alt="${esc(n)}" loading="lazy" onerror="this.remove()"></span>`; };
+    const pill = n => `<span class="pill" style="${sty(n)}">${av(n,22)}${esc(n)}</span>`;
+
     function hero(){
       return D.header_image
         ? `<div class="hero"><img src="${esc(D.header_image)}" alt=""></div>`
@@ -873,22 +904,22 @@
         <div class="tableWrap"><table id="hermaniaTable"><thead><tr>${th}</tr></thead><tbody>${tr}</tbody></table></div>${paras(h.after)}`;
     }
     function rankings(){
-      return D.power_rankings.map(r=>`<article class="card" data-rank="${r.rank}">
-          <h3><span class="rankNum">${r.rank}.</span> ${esc(r.team)} — “${esc(r.song)}”</h3>
-          <div class="song">${esc(r.artist)}</div>
+      return D.power_rankings.map(r=>`<article class="card mgr" style="${sty(r.team)}" data-rank="${r.rank}">
+          <div class="rankHead">${av(r.team,64)}<div><h3><span class="rankNum">${r.rank}.</span> ${esc(r.team)} — “${esc(r.song)}”</h3>
+          <div class="song">${esc(r.artist)}</div></div></div>
           <div class="chips">${r.stats.split(" · ").map(s=>`<span class="chip">${esc(s)}</span>`).join("")}</div>
           <div class="sched">${esc(r.schedule)}</div>
           ${paras(r.body)}</article>`).join("");
     }
     function results(){
-      const rows = D.week11_results.map(g=>`<tr><td>${esc(g.winner)}</td><td>${esc(g.loser)}</td><td>${g.winner_score.toFixed(1)}–${g.loser_score.toFixed(1)}</td><td class="num">${g.margin.toFixed(1)}</td><td class="marks">${g.marks.length?g.marks.map(m=>`<span class="m">${esc(m)}</span>`).join(""):"—"}</td></tr>`).join("");
+      const rows = D.week11_results.map(g=>`<tr><td>${pill(g.winner)}</td><td>${pill(g.loser)}</td><td>${g.winner_score.toFixed(1)}–${g.loser_score.toFixed(1)}</td><td class="num">${g.margin.toFixed(1)}</td><td class="marks">${g.marks.length?g.marks.map(m=>`<span class="m">${esc(m)}</span>`).join(""):"—"}</td></tr>`).join("");
       return `<div class="tableWrap"><table id="resultsTable"><thead><tr><th>Winner</th><th>Loser</th><th>Score</th><th class="num">Margin</th><th>Marks</th></tr></thead><tbody>${rows}</tbody></table></div>`;
     }
     function preview(){
       return D.week12_preview.matchups.map(m=>{
         const body=m.stats.map(r=>`<tr><td>${esc(r[0])}</td><td class="num">${esc(r[1])}</td><td class="num">${esc(r[2])}</td></tr>`).join("");
-        return `<article class="card previewCard"><h3>${esc(m.label)}</h3>
-          <div class="tableWrap"><table class="stat"><thead><tr><th></th><th class="num">${esc(m.teams[0])}</th><th class="num">${esc(m.teams[1])}</th></tr></thead><tbody>${body}</tbody></table></div>
+        return `<article class="card previewCard"><h3>${esc(m.label)}</h3><div style="margin:8px 0 12px;display:flex;gap:8px;flex-wrap:wrap">${pill(m.teams[0])}${pill(m.teams[1])}</div>
+          <div class="tableWrap"><table class="stat"><thead><tr><th></th><th class="num mg" style="${sty(m.teams[0])}">${av(m.teams[0],28)}${esc(m.teams[0])}</th><th class="num mg" style="${sty(m.teams[1])}">${av(m.teams[1],28)}${esc(m.teams[1])}</th></tr></thead><tbody>${body}</tbody></table></div>
           ${paras(m.text)}</article>`;}).join("");
     }
     document.getElementById("app").innerHTML = `
